@@ -1,6 +1,7 @@
 ### Downloading data from GBIF 
 
 This folder contains the code to download data GBIF. 
+
 **Input**: list of species names
 **Output**: data from GBIF
 
