@@ -4,3 +4,5 @@ This folder contains the code to download data from GBIF. A user is **required t
 
 
 The following steps need to executed in order:
+
+#### Step 1
