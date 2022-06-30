@@ -3,7 +3,7 @@
 This folder contains the code to download data from GBIF. The user is **required to have a list of species names** and the code downloads media and meta data from GBIF for those corresponding species. Examples species lists are provided in the `example_species_lists` folder.
 
 
-The following steps need to executed in order:
+The following steps need to be executed in order:
 
 ### Step 1: Fetch unique keys
 Step 1 involves fetching unique taxon keys for each species from GBIF Taxanomy backbone. 

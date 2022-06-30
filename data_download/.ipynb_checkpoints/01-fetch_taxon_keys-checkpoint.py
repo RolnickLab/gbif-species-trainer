@@ -19,12 +19,12 @@ import argparse
 
 
 parser = argparse.ArgumentParser()
-parser.add_argument('--file_path', help = 'path of the species list', required=True)
+parser.add_argument('--species_filepath', help = 'path of the species list', required=True)
 parser.add_argument('--column_name', help = 'column name of the species entries', required=True)
 parser.add_argument('--output_filename', help = 'output name of the file', required=True)
 args   = parser.parse_args()
 
-file_path    = args.file_path
+file_path    = args.species_filepath
 column_name  = args.column_name
 out_filename = args.output_filename
 
