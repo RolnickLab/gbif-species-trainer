@@ -19,9 +19,9 @@ import argparse
 
 
 parser = argparse.ArgumentParser()
-parser.add_argument('--file_path', help = 'path of the species list')
-parser.add_argument('--column_name', help = 'column name of the species entries')
-parser.add_argument('--output_filename', help = 'output name of the file')
+parser.add_argument('--file_path', help = 'path of the species list', required=True)
+parser.add_argument('--column_name', help = 'column name of the species entries', required=True)
+parser.add_argument('--output_filename', help = 'output name of the file', required=True)
 args   = parser.parse_args()
 
 file_path    = args.file_path
@@ -61,7 +61,7 @@ def get_gbif_key_backbone(name):
 	df = pd.DataFrame(list(zip(taxon_key, order, family, genus,
 								search_species, gbif_species, confidence,
 								status, match_type)),
-					columns =['taxon_key_guid', 'order_name', 'family_name',
+					columns =['taxon_key_gbif_id', 'order_name', 'family_name',
                               'genus_name', 'search_species_name', 'gbif_species_name',
                               'confidence', 'status', 'match_type'])
 	return df
@@ -72,7 +72,7 @@ species_list  = []
 for indx in data.index:
 	species_list.append(data[column_name][indx])
 
-data_final = pd.DataFrame(columns =['taxon_key_guid', 'order_name', 'family_name',
+data_final = pd.DataFrame(columns =['taxon_key_gbif_id', 'order_name', 'family_name',
                               'genus_name', 'search_species_name', 'gbif_species_name',
                               'confidence', 'status', 'match_type'], dtype=object)
 
