@@ -9,7 +9,7 @@ The following steps need to be executed in order:
 Step 1 involves fetching unique taxon keys for each species from GBIF Taxanomy backbone. 
 ```bash
 python 01-fetch_taxon_keys.py \
---file_path example_species_lists/example2.csv \
+--species_filepath example_species_lists/example2.csv \
 --column_name beetles_species_names \
 --output_filename beetles_30June2022
 ```
