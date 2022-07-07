@@ -4,7 +4,7 @@
 """
 Author       : Aditya Jain
 Date Started : May 10, 2022
-About        : This script scraps data from GBIF for uk list of moth species
+About        : This script scraps data from GBIF for a list of moth species
 """
 
 import pygbif
@@ -17,18 +17,24 @@ import urllib
 import json
 import time
 import math
-import plotly.express as px
+import argparse
 
-data_dir       = '/home/mila/a/aditya.jain/scratch/GBIF_Data/'
-write_dir      = data_dir + 'moths_uk/'
-INat_KEY       = '50c9509d-22c7-4a22-a47d-8c48425ef4a7'   # iNat key to fetch data from GBIF
-LIMIT_DOWN     = 300                                      # GBIF API parameter for max results per page
-MAX_DATA_SP    = 1000                                     # max. no of images to download for a species
+
+parser = argparse.ArgumentParser()
+parser.add_argument('--write_directory', help = 'path of the folder to save the data', required=True)
+parser.add_argument('--species_list', help = 'path of csv file containing list of species, along with unique GBIF taxon keys', required=True)
+parser.add_argument('--max_images_per_species', help = 'maximum number of images to download for any speices', default=500)
+parser.add_argument('--resume_session', help = 'False/True; whether resuming a previously stopped downloading session', required=True, default=False)
+parser.add_argument('--resume_session_index', help = 'if resuming the download, index from the species list from where downloading needs to resume')
+args   = parser.parse_args()
+
+write_dir     = args.write_directory
+species_list  = args.species_list
+MAX_DATA_SP   = args.max_images_per_species    
+
+LIMIT_DOWN     = 300                                      # GBIF API parameter for max results per page 
 MAX_SEARCHES   = 11000                                    # maximum no. of points to iterate
-
-moth_species   = 'UK-MacroMoth-List_09May2022.csv'
-file           = data_dir + moth_species
-moth_data      = pd.read_csv(file)
+moth_data      = pd.read_csv(species_list)
 
 
 # Downloading gbif data
@@ -61,7 +67,7 @@ columns            = ['taxon_key_guid', 'search_species_name', 'gbif_species_nam
 count_list         = pd.DataFrame(columns = columns, dtype=object)         # uncomment if downloading data from scratch       
 
 ### this snippet is run ONLY is training is resuming from some point ####
-start              = 858
+start              = 858-1
 end                = ''
 taxon_key          = taxon_key[start:]
 species_name       = species_name[start:]

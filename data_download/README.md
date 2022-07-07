@@ -15,7 +15,22 @@ python 01-fetch_taxon_keys.py \
 ```
 
 ### Step 2: Download data
+```bash
+python 02a-fetch_gbif_moth_data.py \
+--write_directory /home/mila/a/aditya.jain/scratch/gbif_data/ \
+--species_list beetles_30June2022.csv \
+--max_images_per_species 500 \
+--resume_session False 
+```
 
+```bash
+python 02a-fetch_gbif_moth_data.py \
+--write_directory /home/mila/a/aditya.jain/scratch/gbif_data/ \
+--species_list beetles_30June2022.csv \
+--max_images_per_species 500 \
+--resume_session True \
+--resume_session_index 4
+```
 
 
 
