@@ -22,7 +22,7 @@ import argparse
 
 parser = argparse.ArgumentParser()
 parser.add_argument('--write_directory', help = 'path of the folder to save the data', required=True)
-parser.add_argument('--species_list', help = 'path of csv file containing list of species, along with unique GBIF taxon keys', required=True)
+parser.add_argument('--species_list', help = 'path of csv file containing list of species along with unique GBIF taxon keys', required=True)
 parser.add_argument('--max_images_per_species', help = 'maximum number of images to download for any speices', default=500)
 parser.add_argument('--resume_session', help = 'False/True; whether resuming a previously stopped downloading session', required=True, default=False)
 parser.add_argument('--resume_session_index', help = 'if resuming the download, index from the species list from where downloading needs to resume')
@@ -59,21 +59,19 @@ def inat_metadata_gbif(data):
 
 
 dataset_list       = []
+taxon_key          = list(moth_data['taxon_key_gbif_id'])         # list of taxon keys
+species_name       = list(moth_data['search_species_name'])       # list of species name that is searched
+gbif_species_name  = list(moth_data['gbif_species_name'])         # list of species name returned by gbif [can be different from above or NA]
+columns            = ['taxon_key_gbif_id', 'search_species_name', 'gbif_species_name', 'count']
+count_list         = pd.DataFrame(columns = columns, dtype=object)            
 
-taxon_key          = list(moth_data['taxon_key_guid'])         # list of taxon keys
-species_name       = list(moth_data['search_species_name'])    # list of species name that is searched
-gbif_species_name  = list(moth_data['gbif_species_name'])      # list of species name returned by gbif [can be different from above or NA]
-columns            = ['taxon_key_guid', 'search_species_name', 'gbif_species_name', 'count']
-count_list         = pd.DataFrame(columns = columns, dtype=object)         # uncomment if downloading data from scratch       
-
-### this snippet is run ONLY is training is resuming from some point ####
-start              = 858-1
-end                = ''
-taxon_key          = taxon_key[start:]
-species_name       = species_name[start:]
-gbif_species_name  = gbif_species_name[start:]
-count_list         = pd.read_csv(write_dir + 'datacount.csv')         # keeps the count of data downloaded for each species: key, name, name, count                            
-##########################################################################
+# if resuming the download session
+if args.resume_session:
+    start              = args.resume_session_index-1
+    taxon_key          = taxon_key[start:]
+    species_name       = species_name[start:]
+    gbif_species_name  = gbif_species_name[start:]
+    count_list         = pd.read_csv(write_dir + 'datacount.csv')         
 
 for i in range(len(taxon_key)):
     print('Downloading for: ', species_name[i])
@@ -146,13 +144,9 @@ for i in range(len(taxon_key)):
                                                 columns=columns), ignore_index=True)
       
             end = time.time()
-            print('Time taken to download data for ', gbif_species_name[i], ' is - ', 
-            round(end-begin), 'sec for ', image_count, ' images')
+            print('Time taken to download data for ', gbif_species_name[i], ' is - ', round(end-begin), 'sec for ', image_count, ' images')
 
     count_list.to_csv(write_dir + 'datacount.csv', index=False)
-      
-print(count_list)    
-print(dataset_list)
 
 
 
