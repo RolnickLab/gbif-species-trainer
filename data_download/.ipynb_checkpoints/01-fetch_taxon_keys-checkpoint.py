@@ -21,12 +21,12 @@ import argparse
 parser = argparse.ArgumentParser()
 parser.add_argument('--species_filepath', help = 'path of the species list', required=True)
 parser.add_argument('--column_name', help = 'column name of the species entries', required=True)
-parser.add_argument('--output_filename', help = 'output name of the file', required=True)
+parser.add_argument('--output_filepath', help = 'path to the output file with csv extension', required=True)
 args   = parser.parse_args()
 
 file_path    = args.species_filepath
 column_name  = args.column_name
-out_filename = args.output_filename
+out_filename = args.output_filepath
 
 def get_gbif_key_backbone(name):
 	""" given a species name, this function returns the unique gbif key and other 
@@ -83,7 +83,7 @@ for name in species_list:
     
 
 # save the file
-data_final.to_csv(out_filename + '.csv', index=False)  
+data_final.to_csv(out_filename, index=False)  
 
 
 

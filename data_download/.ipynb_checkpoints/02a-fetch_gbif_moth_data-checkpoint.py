@@ -22,14 +22,14 @@ import argparse
 
 parser = argparse.ArgumentParser()
 parser.add_argument('--write_directory', help = 'path of the folder to save the data', required=True)
-parser.add_argument('--species_list', help = 'path of csv file containing list of species along with unique GBIF taxon keys', required=True)
-parser.add_argument('--max_images_per_species', help = 'maximum number of images to download for any speices', default=500)
-parser.add_argument('--resume_session', help = 'False/True; whether resuming a previously stopped downloading session', required=True, default=False)
-parser.add_argument('--resume_session_index', help = 'if resuming the download, index from the species list from where downloading needs to resume')
+parser.add_argument('--species_key_filepath', help = 'path of csv file containing list of species names along with unique GBIF taxon keys', required=True)
+parser.add_argument('--max_images_per_species', help = 'maximum number of images to download for any speices', default=500, type=int)
+parser.add_argument('--resume_session', help = 'False/True; whether resuming a previously stopped downloading session', default=False, type=bool)
+parser.add_argument('--resume_session_index', help = 'if resuming the download, index from the species list from where downloading needs to resume', type=int)
 args   = parser.parse_args()
 
 write_dir     = args.write_directory
-species_list  = args.species_list
+species_list  = args.species_key_filepath
 MAX_DATA_SP   = args.max_images_per_species    
 
 LIMIT_DOWN     = 300                                      # GBIF API parameter for max results per page 
@@ -40,7 +40,7 @@ moth_data      = pd.read_csv(species_list)
 # Downloading gbif data
 
 def inat_metadata_gbif(data):
-    """ returns the relevant gbif metadata for an iNat observation"""
+    """ returns the relevant gbif metadata for a GBIF observation"""
 
     fields    = ['decimalLatitude', 'decimalLongitude',
             'order', 'family', 'genus', 'species', 'acceptedScientificName',
@@ -66,7 +66,7 @@ columns            = ['taxon_key_gbif_id', 'search_species_name', 'gbif_species_
 count_list         = pd.DataFrame(columns = columns, dtype=object)            
 
 # if resuming the download session
-if args.resume_session:
+if args.resume_session is True:
     start              = args.resume_session_index-1
     taxon_key          = taxon_key[start:]
     species_name       = species_name[start:]
@@ -115,7 +115,7 @@ for i in range(len(taxon_key)):
 
                 for k in range(tot_points):                     
                     if data['results'][k]['media'] and 'lifeStage' in data['results'][k].keys():
-                        if data['results'][k]['lifeStage']=='Adult':            
+                        if data['results'][k]['lifeStage']=='Adult' or data['results'][k]['lifeStage']=='Imago':          
                             gbifid   = data['results'][k]['gbifID']
                             
                             if 'identifier' in data['results'][k]['media'][0].keys():
