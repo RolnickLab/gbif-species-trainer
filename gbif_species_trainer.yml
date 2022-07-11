@@ -1,0 +1,14 @@
+name: milamoth
+channels:
+  - defaults
+dependencies:
+  - python=3.7
+  - torchvision
+  - pytorch
+  - cudatoolkit=10.2
+  - torchaudio
+  - ipykernel
+  - opencv
+  - tensorflow
+prefix: /home/mila/a/aditya.jain/.conda/envs/milamoth
+
