@@ -1,4 +1,4 @@
-name: milamoth
+name: test_env
 channels:
   - defaults
 dependencies:
@@ -6,9 +6,19 @@ dependencies:
   - torchvision
   - pytorch
   - cudatoolkit=10.2
-  - torchaudio
   - ipykernel
   - opencv
   - tensorflow
-prefix: /home/mila/a/aditya.jain/.conda/envs/milamoth
+  - pip
+  - pip:
+    - keras==2.4.3
+    - numpy==1.19.5
+    - pygbif==0.5.0
+    - python-utils==2.5.6
+    - timm==0.5.4
+    - torchsummary==1.5.1
+    - utils==1.0.1
+    - wandb==0.12.16
+    - webdataset==0.2.5
+
 
