@@ -40,9 +40,9 @@ The description of the arguments to the script:
 It is quite possible for the user to have a list of hundreds or thousands of species and maybe downloading half-a-million images. The downloading process is not too fast and can take days to complete in such cases. Hence, it is quite possible that the data needs to be fetched in parts. If the user is resuming a previous downloading session, `True` should be passed to the `--resume_session` argument and `False` for downloading from scratch.
 
 
-
-
 There are two scripts for this step: `02a-fetch_gbif_moth_data.py` and `02b-fetch_gbif_other_data.py`. If the user needs to download data for moths and  species that have a similar life cycle (eggs-larvae-pupa-adult), `02a-fetch_gbif_moth_data.py` script ensures that images of only **adult** stage are downloaded. If this does not matter, for example the case of mammals maybe, then `02b-fetch_gbif_other_data.py` should be used.
+
+In case you are using a compute cluster, you can submit your slurm job using the given bash scripts. 
 
 
 <!-- ### Step 3: Create webdataset and remove corrupted images
