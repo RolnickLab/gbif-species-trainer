@@ -24,8 +24,7 @@ parser = argparse.ArgumentParser()
 parser.add_argument('--write_directory', help = 'path of the folder to save the data', required=True)
 parser.add_argument('--species_key_filepath', help = 'path of csv file containing list of species names along with unique GBIF taxon keys', required=True)
 parser.add_argument('--max_images_per_species', help = 'maximum number of images to download for any speices', default=500, type=int)
-parser.add_argument('--resume_session', help = 'False/True; whether resuming a previously stopped downloading session', default=False, type=bool)
-parser.add_argument('--resume_session_index', help = 'if resuming the download, index from the species list from where downloading needs to resume', type=int)
+parser.add_argument('--resume_session', help = 'False/True; whether resuming a previously stopped downloading session', required=True, type=bool)
 args   = parser.parse_args()
 
 write_dir     = args.write_directory
@@ -67,13 +66,12 @@ count_list         = pd.DataFrame(columns = columns, dtype=object)
 
 # if resuming the download session
 if args.resume_session is True:
-    start              = args.resume_session_index-1
-    taxon_key          = taxon_key[start:]
-    species_name       = species_name[start:]
-    gbif_species_name  = gbif_species_name[start:]
     count_list         = pd.read_csv(write_dir + 'datacount.csv')         
 
 for i in range(len(taxon_key)):
+    if int(taxon_key[i]) in count_list['taxon_key_gbif_id'].tolist():
+        print(f'Already downloaded for {species_name[i]}')
+        continue
     print('Downloading for: ', species_name[i])
     begin   = time.time()
     if taxon_key[i] == -1:          # taxa not there on GBIF
@@ -84,7 +82,7 @@ for i in range(len(taxon_key)):
         total_count = data['count']   
 
         if total_count==0:            # no image data found for the species 
-            count_list = count_list.append(pd.DataFrame([[taxon_key[i], species_name[i], gbif_species_name[i], 0]],
+            count_list = count_list.append(pd.DataFrame([[int(taxon_key[i]), species_name[i], gbif_species_name[i], 0]],
                                                 columns=columns), ignore_index=True)    
         else:
             image_count = 0                                   # images downloaded for every species
@@ -128,7 +126,7 @@ for i in range(len(taxon_key)):
                                     if meta_data['datasetName'] not in dataset_list:
                                         dataset_list.append(meta_data['datasetName'])
                                 except:
-                                    pass  
+                                    continue  
                     if image_count >= MAX_DATA_SP:
                         break
                 
@@ -140,7 +138,7 @@ for i in range(len(taxon_key)):
                 json.dump(m_data, outfile)       
 
             count_list = count_list.append(pd.DataFrame([[int(taxon_key[i]), species_name[i], 
-                         gbif_species_name[i], image_count]],
+                         gbif_species_name[i], int(image_count)]],
                                                 columns=columns), ignore_index=True)
       
             end = time.time()

@@ -9,7 +9,13 @@ Install [conda](https://docs.conda.io/projects/conda/en/latest/user-guide/instal
 conda env create -f gbif_species_trainer.yml
 ```
 
-Activate the python environment:
+Install additional libraries using pip:
+
+```bash
+pip install -r requirements.txt
+```
+
+Activate the conda environment:
 ```bash
 conda activate gbif_species_trainer
 ```

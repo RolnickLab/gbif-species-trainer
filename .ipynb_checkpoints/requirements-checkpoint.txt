@@ -1,0 +1,7 @@
+pygbif
+scikit-learn
+webdataset
+pandas
+wandb
+torchsummary
+keras

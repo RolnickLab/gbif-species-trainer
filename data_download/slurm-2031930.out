@@ -1,0 +1,47 @@
+[=== Module anaconda/3 loaded ===]
+Downloading for:  Lucanus cervus
+Time taken to download data for  Lucanus cervus  is -  354 sec for  500  images
+Downloading for:  Dorcus rectus
+Time taken to download data for  Dorcus rectus  is -  39 sec for  66  images
+Downloading for:  Prosopocoilus inclinatus
+Time taken to download data for  Prosopocoilus inclinatus  is -  40 sec for  68  images
+Downloading for:  Allotopus rosenbergi
+Downloading for:  Hexarthrius mandibularis
+Time taken to download data for  Hexarthrius mandibularis  is -  20 sec for  0  images
+Downloading for:  Prosopocoilus giraffa
+Time taken to download data for  Prosopocoilus girafa  is -  21 sec for  4  images
+
+======== GPU REPORT ========
+
+==============NVSMI LOG==============
+
+Timestamp                                 : Wed Jul 13 05:57:30 2022
+Driver Version                            : 510.73.08
+CUDA Version                              : 11.6
+
+Attached GPUs                             : 1
+GPU 00000000:3A:00.0
+    Accounting Mode                       : Enabled
+    Accounting Mode Buffer Size           : 4000
+    Accounted Processes                   : None
+
+Wed Jul 13 05:57:30 2022       
++-----------------------------------------------------------------------------+
+| NVIDIA-SMI 510.73.08    Driver Version: 510.73.08    CUDA Version: 11.6     |
+|-------------------------------+----------------------+----------------------+
+| GPU  Name        Persistence-M| Bus-Id        Disp.A | Volatile Uncorr. ECC |
+| Fan  Temp  Perf  Pwr:Usage/Cap|         Memory-Usage | GPU-Util  Compute M. |
+|                               |                      |               MIG M. |
+|===============================+======================+======================|
+|   0  Quadro RTX 8000     Off  | 00000000:3A:00.0 Off |                  Off |
+| 33%   23C    P8     6W / 260W |      0MiB / 49152MiB |      0%      Default |
+|                               |                      |                  N/A |
++-------------------------------+----------------------+----------------------+
+                                                                               
++-----------------------------------------------------------------------------+
+| Processes:                                                                  |
+|  GPU   GI   CI        PID   Type   Process name                  GPU Memory |
+|        ID   ID                                                   Usage      |
+|=============================================================================|
+|  No running processes found                                                 |
++-----------------------------------------------------------------------------+
