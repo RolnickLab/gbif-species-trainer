@@ -1,0 +1,23 @@
+{
+    "os": "Linux-4.15.0-180-generic-x86_64-with-debian-buster-sid",
+    "python": "3.7.10",
+    "heartbeatAt": "2022-06-16T04:30:09.376956",
+    "startedAt": "2022-06-16T04:30:00.450965",
+    "docker": null,
+    "gpu": "Quadro RTX 8000",
+    "gpu_count": 1,
+    "cpu_count": 40,
+    "cuda": "10.2.89",
+    "args": null,
+    "state": "running",
+    "program": "<python with no main file>",
+    "git": {
+        "remote": "https://github.com/adityajain07/mothAI.git",
+        "commit": "16e54a1274585cc3f50563490daa05e06e1e09c0"
+    },
+    "email": "aditya.jain@mila.quebec",
+    "root": "/home/mila/a/aditya.jain/mothAI",
+    "host": "cn-a008",
+    "username": "aditya.jain",
+    "executable": "/home/mila/a/aditya.jain/.conda/envs/milamoth/bin/python"
+}

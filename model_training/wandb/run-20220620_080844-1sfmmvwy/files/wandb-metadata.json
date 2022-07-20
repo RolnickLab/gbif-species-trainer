@@ -1,0 +1,29 @@
+{
+    "os": "Linux-4.15.0-180-generic-x86_64-with-debian-buster-sid",
+    "python": "3.7.10",
+    "heartbeatAt": "2022-06-20T12:09:09.557546",
+    "startedAt": "2022-06-20T12:08:44.926293",
+    "docker": null,
+    "gpu": "Quadro RTX 8000",
+    "gpu_count": 1,
+    "cpu_count": 64,
+    "cuda": null,
+    "args": [
+        "--data_path",
+        "/Tmp/slurm.1944278.0/home/mila/a/aditya.jain/scratch/GBIF_Data/moths_uk",
+        "--config_file",
+        "config/01-config_uk.json"
+    ],
+    "state": "running",
+    "program": "train_uk.py",
+    "codePath": "classification_moths/train_uk.py",
+    "git": {
+        "remote": "https://github.com/adityajain07/mothAI.git",
+        "commit": "2251e824fd67d20e2928d2c98e01bf8671655f0f"
+    },
+    "email": "aditya.jain@mila.quebec",
+    "root": "/home/mila/a/aditya.jain/mothAI",
+    "host": "cn-c007",
+    "username": "aditya.jain",
+    "executable": "/home/mila/a/aditya.jain/.conda/envs/milamoth/bin/python"
+}

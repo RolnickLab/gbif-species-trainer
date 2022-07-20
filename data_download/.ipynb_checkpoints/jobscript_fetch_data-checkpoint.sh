@@ -1,8 +1,9 @@
 #!/bin/bash
-#SBATCH --partition=main                # Ask for unkillable job
+#SBATCH --partition=unkillable                # Ask for unkillable job
 #SBATCH --cpus-per-task=2                     # Ask for 2 CPUs
 #SBATCH --gres=gpu:1                          # Ask for 1 GPU
 #SBATCH --mem=2G                              # Ask for 2 GB of RAM
+#SBATCH --output=fetch_data_output.out
 
 # 1. Load the required modules
 module load anaconda/3
@@ -11,8 +12,8 @@ module load anaconda/3
 conda activate milamoth
 
 # 4. Launch your script
-python 02b-fetch_gbif_other_data.py \
---write_directory /home/mila/a/aditya.jain/scratch/gbif_data/ \
---species_key_filepath beetles_30June2022.csv \
+python 02a-fetch_gbif_moth_data.py \
+--write_directory /home/mila/a/aditya.jain/scratch/GBIF_Data/moths_uk-denmark/ \
+--species_key_filepath /home/mila/a/aditya.jain/mothAI/species_lists/UK-Denmark-Moth-List_11July2022.csv \
 --max_images_per_species 500 \
---resume_session False 
+--resume_session True 

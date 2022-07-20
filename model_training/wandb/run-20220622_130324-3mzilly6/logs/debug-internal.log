@@ -1,0 +1,199 @@
+2022-06-22 13:03:26,934 INFO    MainThread:28421 [internal.py:wandb_internal():93] W&B internal server running at pid: 28421, started at: 2022-06-22 13:03:26.933828
+2022-06-22 13:03:26,938 INFO    WriterThread:28421 [datastore.py:open_for_write():75] open: /home/mila/a/aditya.jain/mothAI/classification_moths/wandb/run-20220622_130324-3mzilly6/run-3mzilly6.wandb
+2022-06-22 13:03:26,943 DEBUG   SenderThread:28421 [sender.py:send():232] send: header
+2022-06-22 13:03:26,943 DEBUG   SenderThread:28421 [sender.py:send():232] send: run
+2022-06-22 13:03:27,137 DEBUG   HandlerThread:28421 [handler.py:handle_request():141] handle_request: check_version
+2022-06-22 13:03:27,145 INFO    SenderThread:28421 [dir_watcher.py:__init__():197] watching files in: /home/mila/a/aditya.jain/mothAI/classification_moths/wandb/run-20220622_130324-3mzilly6/files
+2022-06-22 13:03:27,146 INFO    SenderThread:28421 [sender.py:_start_run_threads():814] run started: 3mzilly6 with start time 1655917404
+2022-06-22 13:03:27,146 DEBUG   SenderThread:28421 [sender.py:send():232] send: summary
+2022-06-22 13:03:27,147 INFO    SenderThread:28421 [sender.py:_save_file():948] saving file wandb-summary.json with policy end
+2022-06-22 13:03:27,147 DEBUG   SenderThread:28421 [sender.py:send_request():246] send_request: check_version
+2022-06-22 13:03:27,204 DEBUG   HandlerThread:28421 [handler.py:handle_request():141] handle_request: run_start
+2022-06-22 13:03:28,314 INFO    Thread-7  :28421 [dir_watcher.py:_on_file_created():244] file/dir created: /home/mila/a/aditya.jain/mothAI/classification_moths/wandb/run-20220622_130324-3mzilly6/files/wandb-summary.json
+2022-06-22 13:03:32,393 INFO    Thread-7  :28421 [dir_watcher.py:_on_file_created():244] file/dir created: /home/mila/a/aditya.jain/mothAI/classification_moths/wandb/run-20220622_130324-3mzilly6/files/output.log
+2022-06-22 13:03:33,852 DEBUG   HandlerThread:28421 [meta.py:__init__():35] meta init
+2022-06-22 13:03:33,852 DEBUG   HandlerThread:28421 [meta.py:__init__():49] meta init done
+2022-06-22 13:03:33,852 DEBUG   HandlerThread:28421 [meta.py:probe():209] probe
+2022-06-22 13:03:33,860 DEBUG   HandlerThread:28421 [meta.py:_setup_git():199] setup git
+2022-06-22 13:03:33,905 DEBUG   HandlerThread:28421 [meta.py:_setup_git():206] setup git done
+2022-06-22 13:03:33,905 DEBUG   HandlerThread:28421 [meta.py:_save_pip():53] save pip
+2022-06-22 13:03:33,907 DEBUG   HandlerThread:28421 [meta.py:_save_pip():67] save pip done
+2022-06-22 13:03:33,907 DEBUG   HandlerThread:28421 [meta.py:_save_conda():74] save conda
+2022-06-22 13:03:34,396 INFO    Thread-7  :28421 [dir_watcher.py:_on_file_created():244] file/dir created: /home/mila/a/aditya.jain/mothAI/classification_moths/wandb/run-20220622_130324-3mzilly6/files/conda-environment.yaml
+2022-06-22 13:03:34,397 INFO    Thread-7  :28421 [dir_watcher.py:_on_file_created():244] file/dir created: /home/mila/a/aditya.jain/mothAI/classification_moths/wandb/run-20220622_130324-3mzilly6/files/requirements.txt
+2022-06-22 13:03:40,233 DEBUG   HandlerThread:28421 [meta.py:_save_conda():84] save conda done
+2022-06-22 13:03:40,234 DEBUG   HandlerThread:28421 [meta.py:probe():247] probe done
+2022-06-22 13:03:40,244 DEBUG   HandlerThread:28421 [handler.py:handle_request():141] handle_request: stop_status
+2022-06-22 13:03:40,245 DEBUG   SenderThread:28421 [sender.py:send_request():246] send_request: stop_status
+2022-06-22 13:03:40,363 DEBUG   SenderThread:28421 [sender.py:send():232] send: telemetry
+2022-06-22 13:03:40,363 DEBUG   SenderThread:28421 [sender.py:send():232] send: telemetry
+2022-06-22 13:03:40,363 DEBUG   SenderThread:28421 [sender.py:send():232] send: files
+2022-06-22 13:03:40,364 INFO    SenderThread:28421 [sender.py:_save_file():948] saving file wandb-metadata.json with policy now
+2022-06-22 13:03:40,405 INFO    Thread-7  :28421 [dir_watcher.py:_on_file_modified():257] file/dir modified: /home/mila/a/aditya.jain/mothAI/classification_moths/wandb/run-20220622_130324-3mzilly6/files/conda-environment.yaml
+2022-06-22 13:03:40,405 INFO    Thread-7  :28421 [dir_watcher.py:_on_file_created():244] file/dir created: /home/mila/a/aditya.jain/mothAI/classification_moths/wandb/run-20220622_130324-3mzilly6/files/wandb-metadata.json
+2022-06-22 13:03:40,762 INFO    Thread-11 :28421 [upload_job.py:push():132] Uploaded file /tmp/tmpn8u6bcpawandb/3selm1hf-wandb-metadata.json
+2022-06-22 13:03:42,408 INFO    Thread-7  :28421 [dir_watcher.py:_on_file_modified():257] file/dir modified: /home/mila/a/aditya.jain/mothAI/classification_moths/wandb/run-20220622_130324-3mzilly6/files/output.log
+2022-06-22 13:03:44,411 INFO    Thread-7  :28421 [dir_watcher.py:_on_file_modified():257] file/dir modified: /home/mila/a/aditya.jain/mothAI/classification_moths/wandb/run-20220622_130324-3mzilly6/files/output.log
+2022-06-22 13:03:46,414 INFO    Thread-7  :28421 [dir_watcher.py:_on_file_modified():257] file/dir modified: /home/mila/a/aditya.jain/mothAI/classification_moths/wandb/run-20220622_130324-3mzilly6/files/output.log
+2022-06-22 13:03:52,214 DEBUG   HandlerThread:28421 [handler.py:handle_request():141] handle_request: stop_status
+2022-06-22 13:03:52,215 DEBUG   SenderThread:28421 [sender.py:send_request():246] send_request: stop_status
+2022-06-22 13:03:54,424 INFO    Thread-7  :28421 [dir_watcher.py:_on_file_modified():257] file/dir modified: /home/mila/a/aditya.jain/mothAI/classification_moths/wandb/run-20220622_130324-3mzilly6/files/output.log
+2022-06-22 13:03:57,427 INFO    Thread-7  :28421 [dir_watcher.py:_on_file_modified():257] file/dir modified: /home/mila/a/aditya.jain/mothAI/classification_moths/wandb/run-20220622_130324-3mzilly6/files/config.yaml
+2022-06-22 13:03:58,429 INFO    Thread-7  :28421 [dir_watcher.py:_on_file_modified():257] file/dir modified: /home/mila/a/aditya.jain/mothAI/classification_moths/wandb/run-20220622_130324-3mzilly6/files/output.log
+2022-06-22 13:04:00,431 INFO    Thread-7  :28421 [dir_watcher.py:_on_file_modified():257] file/dir modified: /home/mila/a/aditya.jain/mothAI/classification_moths/wandb/run-20220622_130324-3mzilly6/files/output.log
+2022-06-22 13:04:02,211 DEBUG   SenderThread:28421 [sender.py:send():232] send: stats
+2022-06-22 13:04:07,329 DEBUG   HandlerThread:28421 [handler.py:handle_request():141] handle_request: stop_status
+2022-06-22 13:04:07,330 DEBUG   SenderThread:28421 [sender.py:send_request():246] send_request: stop_status
+2022-06-22 13:04:12,582 DEBUG   HandlerThread:28421 [handler.py:handle_request():141] handle_request: partial_history
+2022-06-22 13:04:12,583 DEBUG   HandlerThread:28421 [handler.py:handle_request():141] handle_request: partial_history
+2022-06-22 13:04:12,584 DEBUG   SenderThread:28421 [sender.py:send():232] send: history
+2022-06-22 13:04:12,584 DEBUG   HandlerThread:28421 [handler.py:handle_request():141] handle_request: partial_history
+2022-06-22 13:04:12,585 DEBUG   SenderThread:28421 [sender.py:send():232] send: summary
+2022-06-22 13:04:12,589 INFO    SenderThread:28421 [sender.py:_save_file():948] saving file wandb-summary.json with policy end
+2022-06-22 13:04:12,589 DEBUG   SenderThread:28421 [sender.py:send():232] send: history
+2022-06-22 13:04:12,590 DEBUG   SenderThread:28421 [sender.py:send():232] send: summary
+2022-06-22 13:04:12,591 INFO    SenderThread:28421 [sender.py:_save_file():948] saving file wandb-summary.json with policy end
+2022-06-22 13:04:12,591 DEBUG   SenderThread:28421 [sender.py:send():232] send: history
+2022-06-22 13:04:12,591 DEBUG   SenderThread:28421 [sender.py:send():232] send: summary
+2022-06-22 13:04:12,592 INFO    SenderThread:28421 [sender.py:_save_file():948] saving file wandb-summary.json with policy end
+2022-06-22 13:04:13,447 INFO    Thread-7  :28421 [dir_watcher.py:_on_file_modified():257] file/dir modified: /home/mila/a/aditya.jain/mothAI/classification_moths/wandb/run-20220622_130324-3mzilly6/files/wandb-summary.json
+2022-06-22 13:04:13,950 DEBUG   HandlerThread:28421 [handler.py:handle_request():141] handle_request: log_artifact
+2022-06-22 13:04:13,950 DEBUG   SenderThread:28421 [sender.py:send_request():246] send_request: log_artifact
+2022-06-22 13:04:14,449 INFO    Thread-7  :28421 [dir_watcher.py:_on_file_modified():257] file/dir modified: /home/mila/a/aditya.jain/mothAI/classification_moths/wandb/run-20220622_130324-3mzilly6/files/output.log
+2022-06-22 13:04:16,451 INFO    Thread-7  :28421 [dir_watcher.py:_on_file_modified():257] file/dir modified: /home/mila/a/aditya.jain/mothAI/classification_moths/wandb/run-20220622_130324-3mzilly6/files/output.log
+2022-06-22 13:04:21,359 INFO    Thread-13 :28421 [upload_job.py:push():90] Uploaded file /home/mila/a/aditya.jain/.cache/wandb/artifacts/obj/md5/57/8f6815327bba354bb864a7a55b4189
+2022-06-22 13:04:22,109 INFO    SenderThread:28421 [sender.py:send_request_log_artifact():1005] logged artifact uk_model - {'id': 'QXJ0aWZhY3Q6MTQ2OTQzNzA2', 'digest': 'e0771b658c9de2dedfb54ef75799ba4a', 'state': 'PENDING', 'aliases': [], 'artifactSequence': {'id': 'QXJ0aWZhY3RDb2xsZWN0aW9uOjIyOTE4Njg5', 'latestArtifact': None}, 'version': 'latest'}
+2022-06-22 13:04:22,451 DEBUG   HandlerThread:28421 [handler.py:handle_request():141] handle_request: stop_status
+2022-06-22 13:04:22,451 DEBUG   SenderThread:28421 [sender.py:send_request():246] send_request: stop_status
+2022-06-22 13:04:24,981 DEBUG   HandlerThread:28421 [handler.py:handle_request():141] handle_request: partial_history
+2022-06-22 13:04:24,982 DEBUG   HandlerThread:28421 [handler.py:handle_request():141] handle_request: partial_history
+2022-06-22 13:04:24,983 DEBUG   HandlerThread:28421 [handler.py:handle_request():141] handle_request: partial_history
+2022-06-22 13:04:24,984 DEBUG   HandlerThread:28421 [handler.py:handle_request():141] handle_request: partial_history
+2022-06-22 13:04:24,983 DEBUG   SenderThread:28421 [sender.py:send():232] send: history
+2022-06-22 13:04:24,985 DEBUG   SenderThread:28421 [sender.py:send():232] send: summary
+2022-06-22 13:04:24,986 INFO    SenderThread:28421 [sender.py:_save_file():948] saving file wandb-summary.json with policy end
+2022-06-22 13:04:24,987 DEBUG   SenderThread:28421 [sender.py:send():232] send: history
+2022-06-22 13:04:24,987 DEBUG   SenderThread:28421 [sender.py:send():232] send: summary
+2022-06-22 13:04:24,988 INFO    SenderThread:28421 [sender.py:_save_file():948] saving file wandb-summary.json with policy end
+2022-06-22 13:04:24,988 DEBUG   SenderThread:28421 [sender.py:send():232] send: history
+2022-06-22 13:04:24,989 DEBUG   SenderThread:28421 [sender.py:send():232] send: summary
+2022-06-22 13:04:24,990 INFO    SenderThread:28421 [sender.py:_save_file():948] saving file wandb-summary.json with policy end
+2022-06-22 13:04:24,990 DEBUG   SenderThread:28421 [sender.py:send():232] send: history
+2022-06-22 13:04:24,990 DEBUG   SenderThread:28421 [sender.py:send():232] send: summary
+2022-06-22 13:04:24,991 INFO    SenderThread:28421 [sender.py:_save_file():948] saving file wandb-summary.json with policy end
+2022-06-22 13:04:24,992 DEBUG   SenderThread:28421 [sender.py:send():232] send: telemetry
+2022-06-22 13:04:24,992 DEBUG   SenderThread:28421 [sender.py:send():232] send: telemetry
+2022-06-22 13:04:25,463 INFO    Thread-7  :28421 [dir_watcher.py:_on_file_modified():257] file/dir modified: /home/mila/a/aditya.jain/mothAI/classification_moths/wandb/run-20220622_130324-3mzilly6/files/wandb-summary.json
+2022-06-22 13:04:27,453 DEBUG   SenderThread:28421 [sender.py:send():232] send: exit
+2022-06-22 13:04:27,454 INFO    SenderThread:28421 [sender.py:send_exit():368] handling exit code: 0
+2022-06-22 13:04:27,454 INFO    SenderThread:28421 [sender.py:send_exit():370] handling runtime: 60
+2022-06-22 13:04:27,454 DEBUG   HandlerThread:28421 [handler.py:handle_request():141] handle_request: poll_exit
+2022-06-22 13:04:27,456 INFO    SenderThread:28421 [sender.py:_save_file():948] saving file wandb-summary.json with policy end
+2022-06-22 13:04:27,456 INFO    SenderThread:28421 [sender.py:send_exit():376] send defer
+2022-06-22 13:04:27,461 DEBUG   HandlerThread:28421 [handler.py:handle_request():141] handle_request: defer
+2022-06-22 13:04:27,462 INFO    HandlerThread:28421 [handler.py:handle_request_defer():164] handle defer: 0
+2022-06-22 13:04:27,465 INFO    Thread-7  :28421 [dir_watcher.py:_on_file_modified():257] file/dir modified: /home/mila/a/aditya.jain/mothAI/classification_moths/wandb/run-20220622_130324-3mzilly6/files/wandb-summary.json
+2022-06-22 13:04:27,466 INFO    Thread-7  :28421 [dir_watcher.py:_on_file_modified():257] file/dir modified: /home/mila/a/aditya.jain/mothAI/classification_moths/wandb/run-20220622_130324-3mzilly6/files/output.log
+2022-06-22 13:04:27,591 DEBUG   SenderThread:28421 [sender.py:send_request():246] send_request: poll_exit
+2022-06-22 13:04:27,591 DEBUG   SenderThread:28421 [sender.py:send_request():246] send_request: defer
+2022-06-22 13:04:27,592 INFO    SenderThread:28421 [sender.py:send_request_defer():385] handle sender defer: 0
+2022-06-22 13:04:27,592 INFO    SenderThread:28421 [sender.py:transition_state():389] send defer: 1
+2022-06-22 13:04:27,592 DEBUG   HandlerThread:28421 [handler.py:handle_request():141] handle_request: defer
+2022-06-22 13:04:27,593 INFO    HandlerThread:28421 [handler.py:handle_request_defer():164] handle defer: 1
+2022-06-22 13:04:27,685 DEBUG   SenderThread:28421 [sender.py:send_request():246] send_request: defer
+2022-06-22 13:04:27,685 INFO    SenderThread:28421 [sender.py:send_request_defer():385] handle sender defer: 1
+2022-06-22 13:04:27,686 INFO    SenderThread:28421 [sender.py:transition_state():389] send defer: 2
+2022-06-22 13:04:27,686 DEBUG   SenderThread:28421 [sender.py:send():232] send: stats
+2022-06-22 13:04:27,686 DEBUG   HandlerThread:28421 [handler.py:handle_request():141] handle_request: defer
+2022-06-22 13:04:27,687 INFO    HandlerThread:28421 [handler.py:handle_request_defer():164] handle defer: 2
+2022-06-22 13:04:27,687 DEBUG   SenderThread:28421 [sender.py:send_request():246] send_request: defer
+2022-06-22 13:04:27,687 INFO    SenderThread:28421 [sender.py:send_request_defer():385] handle sender defer: 2
+2022-06-22 13:04:27,688 INFO    SenderThread:28421 [sender.py:transition_state():389] send defer: 3
+2022-06-22 13:04:27,688 DEBUG   HandlerThread:28421 [handler.py:handle_request():141] handle_request: defer
+2022-06-22 13:04:27,688 INFO    HandlerThread:28421 [handler.py:handle_request_defer():164] handle defer: 3
+2022-06-22 13:04:27,689 DEBUG   SenderThread:28421 [sender.py:send_request():246] send_request: defer
+2022-06-22 13:04:27,689 INFO    SenderThread:28421 [sender.py:send_request_defer():385] handle sender defer: 3
+2022-06-22 13:04:27,689 INFO    SenderThread:28421 [sender.py:transition_state():389] send defer: 4
+2022-06-22 13:04:27,690 DEBUG   HandlerThread:28421 [handler.py:handle_request():141] handle_request: defer
+2022-06-22 13:04:27,690 INFO    HandlerThread:28421 [handler.py:handle_request_defer():164] handle defer: 4
+2022-06-22 13:04:27,690 DEBUG   SenderThread:28421 [sender.py:send():232] send: summary
+2022-06-22 13:04:27,692 INFO    SenderThread:28421 [sender.py:_save_file():948] saving file wandb-summary.json with policy end
+2022-06-22 13:04:27,692 DEBUG   SenderThread:28421 [sender.py:send_request():246] send_request: defer
+2022-06-22 13:04:27,693 INFO    SenderThread:28421 [sender.py:send_request_defer():385] handle sender defer: 4
+2022-06-22 13:04:27,693 INFO    SenderThread:28421 [sender.py:transition_state():389] send defer: 5
+2022-06-22 13:04:27,693 DEBUG   HandlerThread:28421 [handler.py:handle_request():141] handle_request: defer
+2022-06-22 13:04:27,694 INFO    HandlerThread:28421 [handler.py:handle_request_defer():164] handle defer: 5
+2022-06-22 13:04:27,694 DEBUG   HandlerThread:28421 [handler.py:handle_request():141] handle_request: poll_exit
+2022-06-22 13:04:27,694 DEBUG   SenderThread:28421 [sender.py:send_request():246] send_request: defer
+2022-06-22 13:04:27,695 INFO    SenderThread:28421 [sender.py:send_request_defer():385] handle sender defer: 5
+2022-06-22 13:04:27,695 INFO    SenderThread:28421 [sender.py:transition_state():389] send defer: 6
+2022-06-22 13:04:27,695 DEBUG   SenderThread:28421 [sender.py:send_request():246] send_request: poll_exit
+2022-06-22 13:04:27,695 DEBUG   HandlerThread:28421 [handler.py:handle_request():141] handle_request: defer
+2022-06-22 13:04:27,696 INFO    HandlerThread:28421 [handler.py:handle_request_defer():164] handle defer: 6
+2022-06-22 13:04:27,696 DEBUG   SenderThread:28421 [sender.py:send_request():246] send_request: defer
+2022-06-22 13:04:27,696 INFO    SenderThread:28421 [sender.py:send_request_defer():385] handle sender defer: 6
+2022-06-22 13:04:27,697 INFO    SenderThread:28421 [dir_watcher.py:finish():312] shutting down directory watcher
+2022-06-22 13:04:27,797 DEBUG   HandlerThread:28421 [handler.py:handle_request():141] handle_request: poll_exit
+2022-06-22 13:04:28,467 INFO    Thread-7  :28421 [dir_watcher.py:_on_file_modified():257] file/dir modified: /home/mila/a/aditya.jain/mothAI/classification_moths/wandb/run-20220622_130324-3mzilly6/files/config.yaml
+2022-06-22 13:04:28,468 INFO    SenderThread:28421 [dir_watcher.py:finish():342] scan: /home/mila/a/aditya.jain/mothAI/classification_moths/wandb/run-20220622_130324-3mzilly6/files
+2022-06-22 13:04:28,468 INFO    SenderThread:28421 [dir_watcher.py:finish():356] scan save: /home/mila/a/aditya.jain/mothAI/classification_moths/wandb/run-20220622_130324-3mzilly6/files/wandb-summary.json wandb-summary.json
+2022-06-22 13:04:28,469 INFO    SenderThread:28421 [dir_watcher.py:finish():356] scan save: /home/mila/a/aditya.jain/mothAI/classification_moths/wandb/run-20220622_130324-3mzilly6/files/config.yaml config.yaml
+2022-06-22 13:04:28,472 INFO    SenderThread:28421 [dir_watcher.py:finish():356] scan save: /home/mila/a/aditya.jain/mothAI/classification_moths/wandb/run-20220622_130324-3mzilly6/files/wandb-metadata.json wandb-metadata.json
+2022-06-22 13:04:28,475 INFO    SenderThread:28421 [dir_watcher.py:finish():356] scan save: /home/mila/a/aditya.jain/mothAI/classification_moths/wandb/run-20220622_130324-3mzilly6/files/conda-environment.yaml conda-environment.yaml
+2022-06-22 13:04:28,476 INFO    SenderThread:28421 [dir_watcher.py:finish():356] scan save: /home/mila/a/aditya.jain/mothAI/classification_moths/wandb/run-20220622_130324-3mzilly6/files/output.log output.log
+2022-06-22 13:04:28,481 INFO    SenderThread:28421 [dir_watcher.py:finish():356] scan save: /home/mila/a/aditya.jain/mothAI/classification_moths/wandb/run-20220622_130324-3mzilly6/files/requirements.txt requirements.txt
+2022-06-22 13:04:28,485 INFO    SenderThread:28421 [sender.py:transition_state():389] send defer: 7
+2022-06-22 13:04:28,486 DEBUG   SenderThread:28421 [sender.py:send_request():246] send_request: poll_exit
+2022-06-22 13:04:28,489 DEBUG   HandlerThread:28421 [handler.py:handle_request():141] handle_request: defer
+2022-06-22 13:04:28,490 INFO    HandlerThread:28421 [handler.py:handle_request_defer():164] handle defer: 7
+2022-06-22 13:04:28,490 DEBUG   SenderThread:28421 [sender.py:send_request():246] send_request: defer
+2022-06-22 13:04:28,490 INFO    SenderThread:28421 [sender.py:send_request_defer():385] handle sender defer: 7
+2022-06-22 13:04:28,491 INFO    SenderThread:28421 [file_pusher.py:finish():145] shutting down file pusher
+2022-06-22 13:04:28,592 DEBUG   HandlerThread:28421 [handler.py:handle_request():141] handle_request: poll_exit
+2022-06-22 13:04:28,592 DEBUG   SenderThread:28421 [sender.py:send_request():246] send_request: poll_exit
+2022-06-22 13:04:28,695 DEBUG   HandlerThread:28421 [handler.py:handle_request():141] handle_request: poll_exit
+2022-06-22 13:04:28,695 DEBUG   SenderThread:28421 [sender.py:send_request():246] send_request: poll_exit
+2022-06-22 13:04:28,797 DEBUG   HandlerThread:28421 [handler.py:handle_request():141] handle_request: poll_exit
+2022-06-22 13:04:28,798 DEBUG   SenderThread:28421 [sender.py:send_request():246] send_request: poll_exit
+2022-06-22 13:04:28,900 DEBUG   HandlerThread:28421 [handler.py:handle_request():141] handle_request: poll_exit
+2022-06-22 13:04:28,901 DEBUG   SenderThread:28421 [sender.py:send_request():246] send_request: poll_exit
+2022-06-22 13:04:28,916 INFO    Thread-14 :28421 [upload_job.py:push():132] Uploaded file /home/mila/a/aditya.jain/mothAI/classification_moths/wandb/run-20220622_130324-3mzilly6/files/wandb-summary.json
+2022-06-22 13:04:28,934 INFO    Thread-16 :28421 [upload_job.py:push():132] Uploaded file /home/mila/a/aditya.jain/mothAI/classification_moths/wandb/run-20220622_130324-3mzilly6/files/conda-environment.yaml
+2022-06-22 13:04:28,941 INFO    Thread-17 :28421 [upload_job.py:push():132] Uploaded file /home/mila/a/aditya.jain/mothAI/classification_moths/wandb/run-20220622_130324-3mzilly6/files/output.log
+2022-06-22 13:04:28,955 INFO    Thread-18 :28421 [upload_job.py:push():132] Uploaded file /home/mila/a/aditya.jain/mothAI/classification_moths/wandb/run-20220622_130324-3mzilly6/files/requirements.txt
+2022-06-22 13:04:28,971 INFO    Thread-15 :28421 [upload_job.py:push():132] Uploaded file /home/mila/a/aditya.jain/mothAI/classification_moths/wandb/run-20220622_130324-3mzilly6/files/config.yaml
+2022-06-22 13:04:29,003 DEBUG   HandlerThread:28421 [handler.py:handle_request():141] handle_request: poll_exit
+2022-06-22 13:04:29,003 DEBUG   SenderThread:28421 [sender.py:send_request():246] send_request: poll_exit
+2022-06-22 13:04:29,106 DEBUG   HandlerThread:28421 [handler.py:handle_request():141] handle_request: poll_exit
+2022-06-22 13:04:29,106 DEBUG   SenderThread:28421 [sender.py:send_request():246] send_request: poll_exit
+2022-06-22 13:04:29,172 INFO    Thread-6  :28421 [sender.py:transition_state():389] send defer: 8
+2022-06-22 13:04:29,173 DEBUG   HandlerThread:28421 [handler.py:handle_request():141] handle_request: defer
+2022-06-22 13:04:29,173 INFO    HandlerThread:28421 [handler.py:handle_request_defer():164] handle defer: 8
+2022-06-22 13:04:29,174 DEBUG   SenderThread:28421 [sender.py:send_request():246] send_request: defer
+2022-06-22 13:04:29,174 INFO    SenderThread:28421 [sender.py:send_request_defer():385] handle sender defer: 8
+2022-06-22 13:04:29,208 DEBUG   HandlerThread:28421 [handler.py:handle_request():141] handle_request: poll_exit
+2022-06-22 13:04:29,423 INFO    SenderThread:28421 [sender.py:transition_state():389] send defer: 9
+2022-06-22 13:04:29,423 DEBUG   SenderThread:28421 [sender.py:send_request():246] send_request: poll_exit
+2022-06-22 13:04:29,424 DEBUG   HandlerThread:28421 [handler.py:handle_request():141] handle_request: defer
+2022-06-22 13:04:29,424 INFO    HandlerThread:28421 [handler.py:handle_request_defer():164] handle defer: 9
+2022-06-22 13:04:29,424 DEBUG   SenderThread:28421 [sender.py:send_request():246] send_request: defer
+2022-06-22 13:04:29,425 INFO    SenderThread:28421 [sender.py:send_request_defer():385] handle sender defer: 9
+2022-06-22 13:04:29,425 INFO    SenderThread:28421 [sender.py:transition_state():389] send defer: 10
+2022-06-22 13:04:29,426 DEBUG   SenderThread:28421 [sender.py:send():232] send: final
+2022-06-22 13:04:29,426 DEBUG   HandlerThread:28421 [handler.py:handle_request():141] handle_request: defer
+2022-06-22 13:04:29,426 DEBUG   SenderThread:28421 [sender.py:send():232] send: footer
+2022-06-22 13:04:29,426 INFO    HandlerThread:28421 [handler.py:handle_request_defer():164] handle defer: 10
+2022-06-22 13:04:29,427 DEBUG   SenderThread:28421 [sender.py:send_request():246] send_request: defer
+2022-06-22 13:04:29,427 INFO    SenderThread:28421 [sender.py:send_request_defer():385] handle sender defer: 10
+2022-06-22 13:04:29,526 DEBUG   HandlerThread:28421 [handler.py:handle_request():141] handle_request: poll_exit
+2022-06-22 13:04:29,527 DEBUG   SenderThread:28421 [sender.py:send_request():246] send_request: poll_exit
+2022-06-22 13:04:29,527 INFO    SenderThread:28421 [file_pusher.py:join():150] waiting for file pusher
+2022-06-22 13:04:29,742 DEBUG   HandlerThread:28421 [handler.py:handle_request():141] handle_request: sampled_history
+2022-06-22 13:04:29,744 DEBUG   HandlerThread:28421 [handler.py:handle_request():141] handle_request: get_summary
+2022-06-22 13:04:29,745 DEBUG   HandlerThread:28421 [handler.py:handle_request():141] handle_request: shutdown
+2022-06-22 13:04:29,745 INFO    HandlerThread:28421 [handler.py:finish():806] shutting down handler
+2022-06-22 13:04:30,426 INFO    WriterThread:28421 [datastore.py:close():279] close: /home/mila/a/aditya.jain/mothAI/classification_moths/wandb/run-20220622_130324-3mzilly6/run-3mzilly6.wandb
+2022-06-22 13:04:30,640 INFO    SenderThread:28421 [sender.py:finish():1110] shutting down sender
+2022-06-22 13:04:30,640 INFO    SenderThread:28421 [file_pusher.py:finish():145] shutting down file pusher
+2022-06-22 13:04:30,640 INFO    SenderThread:28421 [file_pusher.py:join():150] waiting for file pusher
+2022-06-22 13:04:30,641 INFO    MainThread:28421 [internal.py:handle_exit():80] Internal process exited

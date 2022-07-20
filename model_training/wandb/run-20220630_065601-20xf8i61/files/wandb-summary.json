@@ -1,0 +1,1 @@
+{"training loss": 4667.601312696934, "validation loss": 556.0444984547794, "_timestamp": 1656744620, "_runtime": 158058, "_step": 8, "train_micro_species_top1": 75.77, "train_micro_genus_top1": 79.96, "train_micro_family_top1": 92.69, "val_micro_species_top1": 77.1, "val_micro_genus_top1": 81.37, "val_micro_family_top1": 93.48, "time per epoch": 890.0899279634158}

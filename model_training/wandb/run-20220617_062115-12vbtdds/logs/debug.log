@@ -1,0 +1,108 @@
+2022-06-17 06:21:15,859 INFO    MainThread:47113 [wandb_setup.py:_flush():76] Loading settings from /home/mila/a/aditya.jain/.config/wandb/settings
+2022-06-17 06:21:15,861 INFO    MainThread:47113 [wandb_setup.py:_flush():76] Loading settings from /home/mila/a/aditya.jain/mothAI/classification_moths/wandb/settings
+2022-06-17 06:21:15,861 INFO    MainThread:47113 [wandb_setup.py:_flush():76] Loading settings from environment variables: {}
+2022-06-17 06:21:15,862 INFO    MainThread:47113 [wandb_setup.py:_flush():76] Inferring run settings from compute environment: {'program_relpath': 'classification_moths/train_uk.py', 'program': 'train_uk.py'}
+2022-06-17 06:21:15,863 INFO    MainThread:47113 [wandb_init.py:_log_setup():428] Logging user logs to /home/mila/a/aditya.jain/mothAI/classification_moths/wandb/run-20220617_062115-12vbtdds/logs/debug.log
+2022-06-17 06:21:15,864 INFO    MainThread:47113 [wandb_init.py:_log_setup():429] Logging internal logs to /home/mila/a/aditya.jain/mothAI/classification_moths/wandb/run-20220617_062115-12vbtdds/logs/debug-internal.log
+2022-06-17 06:21:15,865 INFO    MainThread:47113 [wandb_init.py:init():462] calling init triggers
+2022-06-17 06:21:15,865 INFO    MainThread:47113 [wandb_init.py:init():466] wandb.init called with sweep_config: {}
+config: {}
+2022-06-17 06:21:15,866 INFO    MainThread:47113 [wandb_init.py:init():510] wandb.init() called when a run is still active
+2022-06-17 06:25:50,378 INFO    MainThread:47113 [wandb_run.py:_atexit_cleanup():1867] got exitcode: 1
+2022-06-17 06:25:50,382 INFO    MainThread:47113 [wandb_run.py:_restore():1839] restore
+2022-06-17 06:25:53,370 INFO    MainThread:47113 [wandb_run.py:_on_finish():1996] got exit ret: file_counts {
+  wandb_count: 1
+}
+pusher_stats {
+  uploaded_bytes: 957
+  total_bytes: 957
+}
+
+2022-06-17 06:25:53,594 INFO    MainThread:47113 [wandb_run.py:_on_finish():1996] got exit ret: file_counts {
+  wandb_count: 1
+}
+pusher_stats {
+  uploaded_bytes: 957
+  total_bytes: 957
+}
+
+2022-06-17 06:25:54,133 INFO    MainThread:47113 [wandb_run.py:_on_finish():1996] got exit ret: file_counts {
+  wandb_count: 6
+}
+pusher_stats {
+  uploaded_bytes: 957
+  total_bytes: 15359
+}
+
+2022-06-17 06:25:54,237 INFO    MainThread:47113 [wandb_run.py:_on_finish():1996] got exit ret: file_counts {
+  wandb_count: 6
+}
+pusher_stats {
+  uploaded_bytes: 957
+  total_bytes: 15359
+}
+
+2022-06-17 06:25:54,341 INFO    MainThread:47113 [wandb_run.py:_on_finish():1996] got exit ret: file_counts {
+  wandb_count: 6
+}
+pusher_stats {
+  uploaded_bytes: 1410
+  total_bytes: 15359
+}
+
+2022-06-17 06:25:54,444 INFO    MainThread:47113 [wandb_run.py:_on_finish():1996] got exit ret: file_counts {
+  wandb_count: 6
+}
+pusher_stats {
+  uploaded_bytes: 15359
+  total_bytes: 15359
+}
+
+2022-06-17 06:25:54,548 INFO    MainThread:47113 [wandb_run.py:_on_finish():1996] got exit ret: file_counts {
+  wandb_count: 6
+}
+pusher_stats {
+  uploaded_bytes: 15359
+  total_bytes: 15359
+}
+
+2022-06-17 06:25:54,652 INFO    MainThread:47113 [wandb_run.py:_on_finish():1996] got exit ret: file_counts {
+  wandb_count: 6
+}
+pusher_stats {
+  uploaded_bytes: 15359
+  total_bytes: 15359
+}
+
+2022-06-17 06:25:54,756 INFO    MainThread:47113 [wandb_run.py:_on_finish():1996] got exit ret: file_counts {
+  wandb_count: 6
+}
+pusher_stats {
+  uploaded_bytes: 15359
+  total_bytes: 15359
+}
+
+2022-06-17 06:25:55,240 INFO    MainThread:47113 [wandb_run.py:_on_finish():1996] got exit ret: file_counts {
+  wandb_count: 6
+}
+pusher_stats {
+  uploaded_bytes: 15359
+  total_bytes: 15359
+}
+
+2022-06-17 06:25:55,583 INFO    MainThread:47113 [wandb_run.py:_on_finish():1996] got exit ret: done: true
+exit_result {
+}
+file_counts {
+  wandb_count: 6
+}
+pusher_stats {
+  uploaded_bytes: 15359
+  total_bytes: 15359
+}
+local_info {
+}
+
+2022-06-17 06:25:56,961 INFO    MainThread:47113 [wandb_run.py:_footer_history_summary_info():3104] rendering history
+2022-06-17 06:25:56,962 INFO    MainThread:47113 [wandb_run.py:_footer_history_summary_info():3136] rendering summary
+2022-06-17 06:25:56,971 INFO    MainThread:47113 [wandb_run.py:_footer_sync_info():3060] logging synced files
