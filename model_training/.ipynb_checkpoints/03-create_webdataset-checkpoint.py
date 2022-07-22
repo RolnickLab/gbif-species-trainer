@@ -30,7 +30,7 @@ def set_random_seed(random_seed):
 
 
 def create_webdataset(args):
-	"""main function for creating webdataset"""
+	"""creates dataset samples"""
 	
 	dataset_dir       = args.dataset_dir
 	dataset_filepath  = args.dataset_filepath
@@ -49,7 +49,7 @@ def create_webdataset(args):
 	transformer = transforms.Compose([
 					transforms.Resize((img_resize, img_resize))])
 
-	sink        = wds.ShardWriter(webdataset_patern, max_shard_size)
+	sink        = wds.ShardWriter(webdataset_patern, maxsize=max_shard_size)
 	corrupt_img = 0
 
 	for _, row in dataset_df.iterrows():
@@ -92,11 +92,12 @@ def create_webdataset(args):
 		  'jpg': image,
 		  'cls': label
 		}
-
+		
 		sink.write(sample)  
     
 	sink.close()
 	print(f'Total corrupted images are: {corrupt_img}')
+
 
 if __name__ == '__main__':
 	parser = argparse.ArgumentParser()
