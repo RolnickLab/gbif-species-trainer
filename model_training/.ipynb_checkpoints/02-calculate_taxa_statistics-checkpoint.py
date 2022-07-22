@@ -37,7 +37,7 @@ def convert_to_numeric_labels(args):
 	list_data['Note']         = 'The integer index in their respective list will be the numeric class label'
 
 	with open(write_dir + args.numeric_labels_filename + '.json', 'w') as outfile:
-		json.dump(list_data, outfile)
+		json.dump(list_data, outfile, indent=4)
 
 
 def taxon_hierarchy(args):
@@ -55,7 +55,7 @@ def taxon_hierarchy(args):
 			taxon_hierar[data['gbif_species_name'][indx]] = [data['genus_name'][indx], data['family_name'][indx]]
         
 	with open(write_dir + args.taxon_hierarchy_filename + '.json', 'w') as outfile:
-		json.dump(taxon_hierar, outfile)
+		json.dump(taxon_hierar, outfile, indent=4)
 
 
 def count_training_points(args):
@@ -84,7 +84,7 @@ def count_training_points(args):
 			final_count['species'][train_data['species'][indx]] += 1 
 			
 	with open(args.write_dir + args.training_points_filename + '.json', 'w') as outfile:
-		json.dump(final_count, outfile)
+		json.dump(final_count, outfile, indent=4)
 
 if __name__ == '__main__':
 	parser = argparse.ArgumentParser()

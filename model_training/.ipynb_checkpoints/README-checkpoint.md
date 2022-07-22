@@ -33,7 +33,9 @@ python 02-calculate_taxa_statistics.py \
 --species_list /home/mila/a/aditya.jain/mothAI/species_lists/UK-Denmark-Moth-List_11July2022.csv \
 --write_dir /home/mila/a/aditya.jain/gbif_species_trainer/model_training/data/ \
 --numeric_labels_filename uk-denmark_numeric_labels \
---taxon_hierarchy_filename uk-denmark_taxon_hierarchy
+--taxon_hierarchy_filename uk-denmark_taxon_hierarchy \
+--training_points_filename uk-denmark_count_training_points \
+--train_split_file /home/mila/a/aditya.jain/gbif_species_trainer/model_training/data/01-uk-denmark-train-split.csv
 ```
 
 The description of the arguments to the script:
@@ -41,6 +43,8 @@ The description of the arguments to the script:
 * `--write_dir`: Path to the directory for saving the information. **Required**.
 * `--numeric_labels_filename`: Filename for numeric labels file. **Required**.
 * `--taxon_hierarchy_filename`: Filename for taxon hierarchy file. **Required**.
+* `--training_points_filename`: Filename for storing the count of training points. **Required**.
+* `--train_split_file`: Path to the training split file. **Required**.
 
 <br>
 
