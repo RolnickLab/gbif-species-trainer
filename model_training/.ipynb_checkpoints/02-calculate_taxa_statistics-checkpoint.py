@@ -14,7 +14,7 @@ def convert_to_numeric_labels(args):
 	"""converts string labels (species, genus, family) to numeric labels"""
 	
 	data_list   = args.species_list
-	write_dir   = args.write_dir	
+	write_dir   = args.write_dir
 	data        = pd.read_csv(data_list, keep_default_na=False)
 
 	species_list = list(set(data['gbif_species_name']))
@@ -22,6 +22,9 @@ def convert_to_numeric_labels(args):
 	family_list  = list(set(data['family_name']))
 
 	try:
+		species_list.remove('-1')
+		genus_list.remove('-1')
+		family_list.remove('-1')
 		species_list.remove('NA')
 		genus_list.remove('NA')
 		family_list.remove('NA')

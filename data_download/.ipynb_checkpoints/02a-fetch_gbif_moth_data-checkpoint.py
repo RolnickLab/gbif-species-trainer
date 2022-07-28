@@ -61,6 +61,8 @@ dataset_list       = []
 taxon_key          = list(moth_data['taxon_key_gbif_id'])         # list of taxon keys
 species_name       = list(moth_data['search_species_name'])       # list of species name that is searched
 gbif_species_name  = list(moth_data['gbif_species_name'])         # list of species name returned by gbif [can be different from above or NA]
+genus_name         = list(moth_data['family_name'])        # list of family name 
+family_name        = list(moth_data['genus_name'])         # list of genus name 
 columns            = ['taxon_key_gbif_id', 'search_species_name', 'gbif_species_name', 'count']
 count_list         = pd.DataFrame(columns = columns, dtype=object)            
 
@@ -75,7 +77,7 @@ for i in range(len(taxon_key)):
     print('Downloading for: ', species_name[i])
     begin   = time.time()
     if taxon_key[i] == -1:          # taxa not there on GBIF
-        count_list = count_list.append(pd.DataFrame([['NA', species_name[i], 'NA', 'NA']],
+        count_list = count_list.append(pd.DataFrame([[-1, species_name[i], 'NA', 'NA']],
                                                 columns=columns), ignore_index=True)
     else: 
         data        = occ.search(taxonKey = int(taxon_key[i]), mediatype='StillImage', limit=1)
@@ -90,9 +92,9 @@ for i in range(len(taxon_key)):
             total_pag   = math.ceil(MAX_SEARCHES/LIMIT_DOWN)  # total pages to be fetched with max 300 entries each
             offset      = 0
 
-            family  = data['results'][0]['family']
-            genus   = data['results'][0]['genus']  
-            species = data['results'][0]['species']
+            family  = family_name[i]
+            genus   = genus_name[i]  
+            species = gbif_species_name[i]
 
             m_data  = {}                                 # dictionary variable to store metadata
             write_loc = write_dir + family + "/" + genus + "/" + species 

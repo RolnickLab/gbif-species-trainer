@@ -33,7 +33,7 @@ def prepare_split_list(global_pd, new_list, fields):
         
         new_data.append([filename, family, genus, species])
         
-    new_data  = pd.DataFrame(new_data, columns=fields)    
+    new_data  = pd.DataFrame(new_data, columns=fields, dtype=object)    
     global_pd = global_pd.append(new_data, ignore_index=True)
     
     return global_pd        
@@ -50,9 +50,9 @@ def create_data_split(args):
 	assert train_spt+val_spt+test_spt==1, 'Train, val and test ratios should exactly sum to 1'
 	
 	fields     = ['filename', 'family', 'genus', 'species']
-	train_data = pd.DataFrame(columns = fields)
-	val_data   = pd.DataFrame(columns = fields)
-	test_data  = pd.DataFrame(columns = fields)
+	train_data = pd.DataFrame(columns = fields, dtype=object)
+	val_data   = pd.DataFrame(columns = fields, dtype=object)
+	test_data  = pd.DataFrame(columns = fields, dtype=object)
 
 	for family in os.listdir(data_dir):
 		if os.path.isdir(data_dir + '/' + family):
