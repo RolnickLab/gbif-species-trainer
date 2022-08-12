@@ -1,0 +1,154 @@
+2022-08-01 03:58:24,010 INFO    MainThread:37498 [wandb_setup.py:_flush():76] Loading settings from /home/mila/a/aditya.jain/.config/wandb/settings
+2022-08-01 03:58:24,011 INFO    MainThread:37498 [wandb_setup.py:_flush():76] Loading settings from /home/mila/a/aditya.jain/gbif_species_trainer/model_training/wandb/settings
+2022-08-01 03:58:24,011 INFO    MainThread:37498 [wandb_setup.py:_flush():76] Loading settings from environment variables: {}
+2022-08-01 03:58:24,011 INFO    MainThread:37498 [wandb_setup.py:_flush():76] Inferring run settings from compute environment: {'program_relpath': 'model_training/04-train_model.py', 'program': '04-train_model.py'}
+2022-08-01 03:58:24,012 INFO    MainThread:37498 [wandb_init.py:_log_setup():428] Logging user logs to /home/mila/a/aditya.jain/gbif_species_trainer/model_training/wandb/run-20220801_035824-1drefqps/logs/debug.log
+2022-08-01 03:58:24,012 INFO    MainThread:37498 [wandb_init.py:_log_setup():429] Logging internal logs to /home/mila/a/aditya.jain/gbif_species_trainer/model_training/wandb/run-20220801_035824-1drefqps/logs/debug-internal.log
+2022-08-01 03:58:24,012 INFO    MainThread:37498 [wandb_init.py:init():462] calling init triggers
+2022-08-01 03:58:24,013 INFO    MainThread:37498 [wandb_init.py:init():466] wandb.init called with sweep_config: {}
+config: {}
+2022-08-01 03:58:24,013 INFO    MainThread:37498 [wandb_init.py:init():515] starting backend
+2022-08-01 03:58:24,013 INFO    MainThread:37498 [backend.py:_multiprocessing_setup():99] multiprocessing start_methods=fork,spawn,forkserver, using: spawn
+2022-08-01 03:58:24,020 INFO    MainThread:37498 [backend.py:ensure_launched():217] starting backend process...
+2022-08-01 03:58:24,031 INFO    MainThread:37498 [backend.py:ensure_launched():222] started backend process with pid: 37552
+2022-08-01 03:58:24,033 INFO    MainThread:37498 [wandb_init.py:init():525] backend started and connected
+2022-08-01 03:58:24,065 INFO    MainThread:37498 [wandb_init.py:init():596] updated telemetry
+2022-08-01 03:58:24,101 INFO    MainThread:37498 [wandb_init.py:init():628] communicating run to backend with 30 second timeout
+2022-08-01 03:58:27,365 INFO    MainThread:37498 [wandb_run.py:_on_init():1924] communicating current version
+2022-08-01 03:58:27,434 INFO    MainThread:37498 [wandb_run.py:_on_init():1928] got version response upgrade_message: "wandb version 0.12.21 is available!  To upgrade, please run:\n $ pip install wandb --upgrade"
+
+2022-08-01 03:58:27,435 INFO    MainThread:37498 [wandb_init.py:init():662] starting run threads in backend
+2022-08-01 03:58:32,446 INFO    MainThread:37498 [wandb_run.py:_console_start():1898] atexit reg
+2022-08-01 03:58:32,447 INFO    MainThread:37498 [wandb_run.py:_redirect():1771] redirect: SettingsConsole.REDIRECT
+2022-08-01 03:58:32,448 INFO    MainThread:37498 [wandb_run.py:_redirect():1776] Redirecting console.
+2022-08-01 03:58:32,451 INFO    MainThread:37498 [wandb_run.py:_redirect():1832] Redirects installed.
+2022-08-01 03:58:32,452 INFO    MainThread:37498 [wandb_init.py:init():688] run started, returning control to user process
+2022-08-01 03:58:32,469 INFO    MainThread:37498 [wandb_setup.py:_flush():76] Loading settings from /home/mila/a/aditya.jain/.config/wandb/settings
+2022-08-01 03:58:32,470 INFO    MainThread:37498 [wandb_setup.py:_flush():76] Loading settings from /home/mila/a/aditya.jain/gbif_species_trainer/model_training/wandb/settings
+2022-08-01 03:58:32,470 INFO    MainThread:37498 [wandb_setup.py:_flush():76] Loading settings from environment variables: {}
+2022-08-01 03:58:32,471 INFO    MainThread:37498 [wandb_setup.py:_flush():76] Inferring run settings from compute environment: {'program_relpath': 'model_training/04-train_model.py', 'program': '04-train_model.py'}
+2022-08-01 03:58:32,472 INFO    MainThread:37498 [wandb_init.py:_log_setup():428] Logging user logs to /home/mila/a/aditya.jain/gbif_species_trainer/model_training/wandb/run-20220801_035832-14eaewcg/logs/debug.log
+2022-08-01 03:58:32,472 INFO    MainThread:37498 [wandb_init.py:_log_setup():429] Logging internal logs to /home/mila/a/aditya.jain/gbif_species_trainer/model_training/wandb/run-20220801_035832-14eaewcg/logs/debug-internal.log
+2022-08-01 03:58:32,473 INFO    MainThread:37498 [wandb_init.py:init():462] calling init triggers
+2022-08-01 03:58:32,474 INFO    MainThread:37498 [wandb_init.py:init():466] wandb.init called with sweep_config: {}
+config: {}
+2022-08-01 03:58:32,474 INFO    MainThread:37498 [wandb_init.py:init():510] wandb.init() called when a run is still active
+2022-08-01 05:24:38,119 INFO    MainThread:37498 [wandb_run.py:_finish():1685] finishing run moth-ai/UK-Denmark-Moth-Classifier/1drefqps
+2022-08-01 05:24:38,120 INFO    MainThread:37498 [wandb_run.py:_atexit_cleanup():1867] got exitcode: 0
+2022-08-01 05:24:38,122 INFO    MainThread:37498 [wandb_run.py:_restore():1839] restore
+2022-08-01 05:24:40,430 INFO    MainThread:37498 [wandb_run.py:_on_finish():1996] got exit ret: file_counts {
+  wandb_count: 1
+  artifact_count: 1
+}
+pusher_stats {
+  uploaded_bytes: 240462479
+  total_bytes: 240462479
+}
+
+2022-08-01 05:24:40,664 INFO    MainThread:37498 [wandb_run.py:_on_finish():1996] got exit ret: file_counts {
+  wandb_count: 1
+  artifact_count: 1
+}
+pusher_stats {
+  uploaded_bytes: 240462479
+  total_bytes: 240462479
+}
+
+2022-08-01 05:24:41,498 INFO    MainThread:37498 [wandb_run.py:_on_finish():1996] got exit ret: file_counts {
+  wandb_count: 6
+  artifact_count: 1
+}
+pusher_stats {
+  uploaded_bytes: 240462479
+  total_bytes: 240601431
+}
+
+2022-08-01 05:24:41,601 INFO    MainThread:37498 [wandb_run.py:_on_finish():1996] got exit ret: file_counts {
+  wandb_count: 6
+  artifact_count: 1
+}
+pusher_stats {
+  uploaded_bytes: 240462479
+  total_bytes: 240601431
+}
+
+2022-08-01 05:24:41,704 INFO    MainThread:37498 [wandb_run.py:_on_finish():1996] got exit ret: file_counts {
+  wandb_count: 6
+  artifact_count: 1
+}
+pusher_stats {
+  uploaded_bytes: 240462914
+  total_bytes: 240601431
+}
+
+2022-08-01 05:24:41,806 INFO    MainThread:37498 [wandb_run.py:_on_finish():1996] got exit ret: file_counts {
+  wandb_count: 6
+  artifact_count: 1
+}
+pusher_stats {
+  uploaded_bytes: 240601431
+  total_bytes: 240601431
+}
+
+2022-08-01 05:24:41,914 INFO    MainThread:37498 [wandb_run.py:_on_finish():1996] got exit ret: file_counts {
+  wandb_count: 6
+  artifact_count: 1
+}
+pusher_stats {
+  uploaded_bytes: 240601431
+  total_bytes: 240601431
+}
+
+2022-08-01 05:24:42,017 INFO    MainThread:37498 [wandb_run.py:_on_finish():1996] got exit ret: file_counts {
+  wandb_count: 6
+  artifact_count: 1
+}
+pusher_stats {
+  uploaded_bytes: 240601431
+  total_bytes: 240601431
+}
+
+2022-08-01 05:24:42,120 INFO    MainThread:37498 [wandb_run.py:_on_finish():1996] got exit ret: file_counts {
+  wandb_count: 6
+  artifact_count: 1
+}
+pusher_stats {
+  uploaded_bytes: 240601431
+  total_bytes: 240601431
+}
+
+2022-08-01 05:24:42,223 INFO    MainThread:37498 [wandb_run.py:_on_finish():1996] got exit ret: file_counts {
+  wandb_count: 6
+  artifact_count: 1
+}
+pusher_stats {
+  uploaded_bytes: 240601431
+  total_bytes: 240601431
+}
+
+2022-08-01 05:24:43,536 INFO    MainThread:37498 [wandb_run.py:_on_finish():1996] got exit ret: file_counts {
+  wandb_count: 6
+  artifact_count: 1
+}
+pusher_stats {
+  uploaded_bytes: 240601431
+  total_bytes: 240601431
+}
+
+2022-08-01 05:24:43,756 INFO    MainThread:37498 [wandb_run.py:_on_finish():1996] got exit ret: done: true
+exit_result {
+}
+file_counts {
+  wandb_count: 6
+  artifact_count: 1
+}
+pusher_stats {
+  uploaded_bytes: 240601431
+  total_bytes: 240601431
+}
+local_info {
+}
+
+2022-08-01 05:24:45,257 INFO    MainThread:37498 [wandb_run.py:_footer_history_summary_info():3104] rendering history
+2022-08-01 05:24:45,262 INFO    MainThread:37498 [wandb_run.py:_footer_history_summary_info():3136] rendering summary
+2022-08-01 05:24:45,269 INFO    MainThread:37498 [wandb_run.py:_footer_sync_info():3060] logging synced files

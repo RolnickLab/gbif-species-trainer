@@ -1,0 +1,39 @@
+{
+	"note": "This config file is for training on the complete macromoths dataset",
+	
+	"model":{
+		"species_num_classes":3175,
+		"genus_num_classes": 1088, 
+		"family_num_classes": 71,
+		"type": "efficientnetv2-b3",
+		"preprocess_mode": "tf"
+	},
+	
+	"dataset":{
+		"label_info": "/home/mila/a/aditya.jain/gbif_species_trainer/model_training/data/uk-denmark_numeric_labels.json",
+		"taxon_hierarchy": "/home/mila/a/aditya.jain/gbif_species_trainer/model_training/data/uk-denmark_taxon_hierarchy.json"
+	},
+	
+	"training":{
+		"batch_size": 64,
+		"image_resize": 300,
+		"epochs": 30,
+		"early_stopping": 4,
+		"start_val_loss": 100000000,
+		"loss":{
+				"name": "crossentropy"
+				},
+		"optimizer":{
+				"name": "sgd",
+				"learning_rate": 0.001,
+				"momentum": 0.9
+				},
+		"wandb":{
+				"entity": "moth-ai",
+				"project": "UK-Denmark-Moth-Classifier"
+				},
+		"model_save_path": "/home/mila/a/aditya.jain/logs/",
+		"model_name": "uk-denmark-moth-model",
+		"version": "v01"
+	}
+}

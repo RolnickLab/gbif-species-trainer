@@ -1,8 +1,8 @@
-'''
+"""
 Author: Aditya Jain
 Date  : 3rd May, 2021
 About : Description of ResNet-50 Model
-'''
+"""
 
 import torchvision.models as models
 from torch import nn
@@ -29,7 +29,4 @@ class Resnet50(nn.Module):
 		x = self.classifier(x)
 		
 		return x
-	
-	def print_test(self):
-		return self.val
         
