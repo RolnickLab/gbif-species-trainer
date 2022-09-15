@@ -1,120 +1,0 @@
-[=== Module anaconda/3 loaded ===]
-wandb: Currently logged in as: adityajain07 (moth-ai). Use `wandb login --relogin` to force relogin
-{
-   "note": "This config file is for training on the complete macromoths dataset",
-   "model": {
-      "species_num_classes": 3175,
-      "genus_num_classes": 1088,
-      "family_num_classes": 71,
-      "type": "efficientnetv2-b3",
-      "preprocess_mode": "tf"
-   },
-   "dataset": {
-      "label_info": "/home/mila/a/aditya.jain/gbif_species_trainer/model_training/data/uk-denmark_numeric_labels.json",
-      "taxon_hierarchy": "/home/mila/a/aditya.jain/gbif_species_trainer/model_training/data/uk-denmark_taxon_hierarchy.json"
-   },
-   "training": {
-      "batch_size": 64,
-      "image_resize": 300,
-      "epochs": 30,
-      "early_stopping": 4,
-      "start_val_loss": 100000000,
-      "loss": {
-         "name": "crossentropy"
-      },
-      "optimizer": {
-         "name": "sgd",
-         "learning_rate": 0.001,
-         "momentum": 0.9
-      },
-      "wandb": {
-         "entity": "moth-ai",
-         "project": "UK-Denmark-Moth-Classifier"
-      },
-      "model_save_path": "/home/mila/a/aditya.jain/logs/",
-      "model_name": "uk-denmark-moth-model",
-      "version": "v01"
-   }
-}
-wandb: wandb version 0.13.1 is available!  To upgrade, please run:
-wandb:  $ pip install wandb --upgrade
-wandb: Tracking run with wandb version 0.12.16
-wandb: Run data is saved locally in /home/mila/a/aditya.jain/gbif_species_trainer/model_training/wandb/run-20220810_030817-qsanqrmc
-wandb: Run `wandb offline` to turn off syncing.
-wandb: Syncing run vocal-sea-17
-wandb: ⭐️ View project at https://wandb.ai/moth-ai/UK-Denmark-Moth-Classifier
-wandb: 🚀 View run at https://wandb.ai/moth-ai/UK-Denmark-Moth-Classifier/runs/qsanqrmc
-  0% 0/30 [00:00<?, ?it/s]cuda
-  3% 1/30 [1:14:24<35:57:52, 4464.58s/it]  7% 2/30 [2:19:34<33:25:48, 4298.16s/it] 10% 3/30 [3:23:51<31:14:35, 4165.75s/it] 13% 4/30 [4:31:33<29:51:39, 4134.61s/it]Prediction on test data started ...
-wandb: Waiting for W&B process to finish... (success).
-wandb: - 135.790 MB of 135.790 MB uploaded (0.000 MB deduped)wandb: \ 135.790 MB of 135.790 MB uploaded (0.000 MB deduped)wandb: | 135.790 MB of 135.790 MB uploaded (0.000 MB deduped)wandb: / 135.790 MB of 135.917 MB uploaded (0.000 MB deduped)wandb: - 135.790 MB of 135.923 MB uploaded (0.000 MB deduped)wandb: \ 135.911 MB of 135.923 MB uploaded (0.000 MB deduped)wandb: | 135.917 MB of 135.923 MB uploaded (0.000 MB deduped)wandb: / 135.923 MB of 135.923 MB uploaded (0.000 MB deduped)wandb: - 135.923 MB of 135.923 MB uploaded (0.000 MB deduped)wandb: \ 135.923 MB of 135.923 MB uploaded (0.000 MB deduped)wandb: | 135.923 MB of 135.923 MB uploaded (0.000 MB deduped)wandb: / 135.923 MB of 135.923 MB uploaded (0.000 MB deduped)wandb: - 135.923 MB of 135.923 MB uploaded (0.000 MB deduped)wandb:                                                                                
-wandb: 
-wandb: Run history:
-wandb:                    epoch ▁▁▁▃▃▃▅▅▅▆▆▆███
-wandb:           time per epoch █▂▁▃▆
-wandb:  train_micro_family_top1 ▁▃▆▇█
-wandb:   train_micro_genus_top1 ▁▃▆▇█
-wandb: train_micro_species_top1 ▁▃▆▇█
-wandb:            training loss █▅▃▂▁
-wandb:    val_micro_family_top1 ▁█▇█▇
-wandb:     val_micro_genus_top1 ▂▁█▇▆
-wandb:   val_micro_species_top1 ▃▁███
-wandb:          validation loss ▁▃▅▆█
-wandb: 
-wandb: Run summary:
-wandb:                    epoch 4
-wandb:           time per epoch 72.06649
-wandb:  train_micro_family_top1 71.58
-wandb:   train_micro_genus_top1 69.32
-wandb: train_micro_species_top1 69.19
-wandb:            training loss 1.65237
-wandb:    val_micro_family_top1 8.22
-wandb:     val_micro_genus_top1 0.18
-wandb:   val_micro_species_top1 0.05
-wandb:          validation loss 13.11895
-wandb: 
-wandb: Synced vocal-sea-17: https://wandb.ai/moth-ai/UK-Denmark-Moth-Classifier/runs/qsanqrmc
-wandb: Synced 6 W&B file(s), 0 media file(s), 1 artifact file(s) and 0 other file(s)
-wandb: Find logs at: ./wandb/run-20220810_030817-qsanqrmc/logs
- 13% 4/30 [5:54:59<38:27:27, 5324.90s/it]
-
-======== GPU REPORT ========
-
-==============NVSMI LOG==============
-
-Timestamp                                 : Wed Aug 10 09:03:39 2022
-Driver Version                            : 510.73.08
-CUDA Version                              : 11.6
-
-Attached GPUs                             : 1
-GPU 00000000:28:00.0
-    Accounting Mode                       : Enabled
-    Accounting Mode Buffer Size           : 4000
-    Accounted Processes
-        Process ID                        : 8097
-            GPU Utilization               : 67 %
-            Memory Utilization            : 42 %
-            Max memory usage              : 28775 MiB
-            Time                          : 21307796 ms
-            Is Running                    : 0
-
-Wed Aug 10 09:03:39 2022       
-+-----------------------------------------------------------------------------+
-| NVIDIA-SMI 510.73.08    Driver Version: 510.73.08    CUDA Version: 11.6     |
-|-------------------------------+----------------------+----------------------+
-| GPU  Name        Persistence-M| Bus-Id        Disp.A | Volatile Uncorr. ECC |
-| Fan  Temp  Perf  Pwr:Usage/Cap|         Memory-Usage | GPU-Util  Compute M. |
-|                               |                      |               MIG M. |
-|===============================+======================+======================|
-|   0  Quadro RTX 8000     On   | 00000000:28:00.0 Off |                  Off |
-| 33%   42C    P0    99W / 260W |      1MiB / 49152MiB |    100%      Default |
-|                               |                      |                  N/A |
-+-------------------------------+----------------------+----------------------+
-                                                                               
-+-----------------------------------------------------------------------------+
-| Processes:                                                                  |
-|  GPU   GI   CI        PID   Type   Process name                  GPU Memory |
-|        ID   ID                                                   Usage      |
-|=============================================================================|
-|  No running processes found                                                 |
-+-----------------------------------------------------------------------------+

@@ -13,11 +13,11 @@ conda activate milamoth
 
 # 4. Launch your script
 python 02-calculate_taxa_statistics.py \
---species_list /home/mila/a/aditya.jain/mothAI/species_lists/Quebec-Vermont_Moth-List_22July2022.csv \
+--species_list /home/mila/a/aditya.jain/mothAI/species_lists/UK-Denmark_Moth-List_11July2022.csv \
 --write_dir /home/mila/a/aditya.jain/gbif_species_trainer/model_training/data/ \
---numeric_labels_filename quebec-vermont_numeric_labels \
---taxon_hierarchy_filename quebec-vermont_taxon_hierarchy \
---training_points_filename quebec-vermont_count_training_points \
---train_split_file /home/mila/a/aditya.jain/gbif_species_trainer/model_training/data/01-quebec-vermont-train-split.csv
+--numeric_labels_filename uk-denmark_numeric_labels \
+--taxon_hierarchy_filename uk-denmark_taxon_hierarchy \
+--training_points_filename uk-denmark_count_training_points \
+--train_split_file /home/mila/a/aditya.jain/gbif_species_trainer/model_training/data/01-uk-denmark-train-split.csv
 
 

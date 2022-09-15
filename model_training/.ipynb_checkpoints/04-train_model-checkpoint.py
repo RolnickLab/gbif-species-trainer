@@ -254,13 +254,13 @@ def train_model(args):
 	confdata_pd    = pd.concat([confdata_pd_f, confdata_pd_g, confdata_pd_sp], axis=1)
 	confdata_pd.to_csv(mod_save_pth + mod_ver + '_confusion-data.csv', index=False)
 
-	with open(mod_save_pth + mod_ver + '_micro-accuracy.json', 'w') as outfile:
+	with open(mod_save_pth + mod_name + '_' + mod_ver + '_micro-accuracy.json', 'w') as outfile:
 		json.dump(final_micro_accuracy, outfile)
 
-	with open(mod_save_pth + mod_ver + '_macro-accuracy.json', 'w') as outfile:
+	with open(mod_save_pth + mod_name + '_' + mod_ver + '_macro-accuracy.json', 'w') as outfile:
 		json.dump(final_macro_accuracy, outfile)
     
-	with open(mod_save_pth + mod_ver + '_taxon-accuracy.json', 'w') as outfile:
+	with open(mod_save_pth + mod_name + '_' + mod_ver + '_taxon-accuracy.json', 'w') as outfile:
 		json.dump(tax_accuracy, outfile)
 
 	wandb.log({'final micro accuracy' : final_micro_accuracy})

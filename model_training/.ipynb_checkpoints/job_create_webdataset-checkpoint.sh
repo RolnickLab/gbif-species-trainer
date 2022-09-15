@@ -13,23 +13,23 @@ conda activate milamoth
 
 # 4. Launch your script
 python 03-create_webdataset.py \
---dataset_dir /home/mila/a/aditya.jain/scratch/GBIF_Data/moths_quebec-vermont/ \
---dataset_filepath /home/mila/a/aditya.jain/gbif_species_trainer/model_training/data/01-quebec-vermont-train-split.csv \
---label_filepath /home/mila/a/aditya.jain/gbif_species_trainer/model_training/data/quebec-vermont_numeric_labels.json \
+--dataset_dir /home/mila/a/aditya.jain/scratch/GBIF_Data/moths_uk-denmark/ \
+--dataset_filepath /home/mila/a/aditya.jain/gbif_species_trainer/model_training/data/01-uk-denmark-train-split.csv \
+--label_filepath /home/mila/a/aditya.jain/gbif_species_trainer/model_training/data/uk-denmark_numeric_labels.json \
 --image_resize 500 \
---webdataset_patern "/home/mila/a/aditya.jain/scratch/GBIF_Data/webdataset_moths_quebec-vermont/train/train-500-%06d.tar" 
+--webdataset_patern "/home/mila/a/aditya.jain/scratch/GBIF_Data/webdataset_moths_uk-denmark/train/train-500-%06d.tar" 
 
 python 03-create_webdataset.py \
---dataset_dir /home/mila/a/aditya.jain/scratch/GBIF_Data/moths_quebec-vermont/ \
---dataset_filepath /home/mila/a/aditya.jain/gbif_species_trainer/model_training/data/01-quebec-vermont-val-split.csv \
---label_filepath /home/mila/a/aditya.jain/gbif_species_trainer/model_training/data/quebec-vermont_numeric_labels.json \
+--dataset_dir /home/mila/a/aditya.jain/scratch/GBIF_Data/moths_uk-denmark/ \
+--dataset_filepath /home/mila/a/aditya.jain/gbif_species_trainer/model_training/data/01-uk-denmark-val-split.csv \
+--label_filepath /home/mila/a/aditya.jain/gbif_species_trainer/model_training/data/uk-denmark_numeric_labels.json \
 --image_resize 500 \
---webdataset_patern "/home/mila/a/aditya.jain/scratch/GBIF_Data/webdataset_moths_quebec-vermont/val/val-500-%06d.tar" 
+--webdataset_patern "/home/mila/a/aditya.jain/scratch/GBIF_Data/webdataset_moths_uk-denmark/val/val-500-%06d.tar" 
 
 
 python 03-create_webdataset.py \
---dataset_dir /home/mila/a/aditya.jain/scratch/GBIF_Data/moths_quebec-vermont/ \
---dataset_filepath /home/mila/a/aditya.jain/gbif_species_trainer/model_training/data/01-quebec-vermont-test-split.csv \
---label_filepath /home/mila/a/aditya.jain/gbif_species_trainer/model_training/data/quebec-vermont_numeric_labels.json \
+--dataset_dir /home/mila/a/aditya.jain/scratch/GBIF_Data/moths_uk-denmark/ \
+--dataset_filepath /home/mila/a/aditya.jain/gbif_species_trainer/model_training/data/01-uk-denmark-test-split.csv \
+--label_filepath /home/mila/a/aditya.jain/gbif_species_trainer/model_training/data/uk-denmark_numeric_labels.json \
 --image_resize 500 \
---webdataset_patern "/home/mila/a/aditya.jain/scratch/GBIF_Data/webdataset_moths_quebec-vermont/test/test-500-%06d.tar" 
+--webdataset_patern "/home/mila/a/aditya.jain/scratch/GBIF_Data/webdataset_moths_uk-denmark/test/test-500-%06d.tar" 

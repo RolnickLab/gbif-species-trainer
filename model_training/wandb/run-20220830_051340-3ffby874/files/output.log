@@ -1,0 +1,31 @@
+
+cuda
+  0% 0/30 [00:00<?, ?it/s]
+No species in the batch.
+
+  3% 1/30 [3:58:40<115:21:23, 14320.14s/it]
+No species in the batch.
+
+  7% 2/30 [8:04:14<112:20:46, 14444.52s/it]
+No species in the batch.
+
+ 10% 3/30 [12:07:25<108:39:46, 14488.39s/it]
+
+ 13% 4/30 [16:09:13<104:40:52, 14494.34s/it]
+No species in the batch.
+ 13% 4/30 [16:09:13<104:40:52, 14494.34s/it]Traceback (most recent call last):
+  File "04-train_model-test.py", line 327, in <module>
+    train_model(args)
+  File "04-train_model-test.py", line 246, in train_model
+    wandb.log_artifact(save_path, name=mod_name, type='models')
+  File "/home/mila/a/aditya.jain/.conda/envs/milamoth/lib/python3.7/site-packages/wandb/sdk/wandb_run.py", line 222, in wrapper
+    return func(self, *args, **kwargs)
+  File "/home/mila/a/aditya.jain/.conda/envs/milamoth/lib/python3.7/site-packages/wandb/sdk/wandb_run.py", line 2407, in log_artifact
+    artifact_or_path, name=name, type=type, aliases=aliases
+  File "/home/mila/a/aditya.jain/.conda/envs/milamoth/lib/python3.7/site-packages/wandb/sdk/wandb_run.py", line 2540, in _log_artifact
+    artifact_or_path, name, type, aliases
+  File "/home/mila/a/aditya.jain/.conda/envs/milamoth/lib/python3.7/site-packages/wandb/sdk/wandb_run.py", line 2627, in _prepare_artifact
+    "path must be a file, directory or external"
+ValueError: path must be a file, directory or externalreference like s3://bucket/path
+ 13% 4/30 [20:02:51<130:18:34, 18042.87s/it]
+No species in the batch.

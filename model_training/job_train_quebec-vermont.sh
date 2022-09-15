@@ -1,6 +1,6 @@
 #!/bin/bash
 #SBATCH --partition=main                # Ask for unkillable job
-#SBATCH --cpus-per-task=1               # Ask for 1 CPUs
+#SBATCH --cpus-per-task=2               # Ask for 2 CPUs
 #SBATCH --gres=gpu:1                    # Ask for 1 GPU
 #SBATCH --mem=20G                       # Ask for 20 GB of RAM
 
@@ -21,6 +21,6 @@ python 04-train_model.py \
 --train_webdataset_url "$SLURM_TMPDIR/train-500-{000000..000486}.tar" \
 --val_webdataset_url "$SLURM_TMPDIR/val-500-{000000..000064}.tar" \
 --test_webdataset_url "$SLURM_TMPDIR/test-500-{000000..000097}.tar" \
---config_file config/01-config_quebec-vermont.json \
---dataloader_num_workers 1
+--config_file config/02-config_quebec-vermont.json \
+--dataloader_num_workers 2
 

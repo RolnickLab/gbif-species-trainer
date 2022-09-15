@@ -1,0 +1,35 @@
+{
+    "os": "Linux-4.15.0-180-generic-x86_64-with-debian-buster-sid",
+    "python": "3.7.10",
+    "heartbeatAt": "2022-08-30T09:14:29.953081",
+    "startedAt": "2022-08-30T09:13:40.761278",
+    "docker": null,
+    "gpu": "Quadro RTX 8000",
+    "gpu_count": 1,
+    "cpu_count": 64,
+    "cuda": null,
+    "args": [
+        "--train_webdataset_url",
+        "/Tmp/slurm.2194657.0/train-500-{000000..000697}.tar",
+        "--val_webdataset_url",
+        "/Tmp/slurm.2194657.0/val-500-{000000..000092}.tar",
+        "--test_webdataset_url",
+        "/Tmp/slurm.2194657.0/test-500-{000000..000139}.tar",
+        "--config_file",
+        "config/01-config_uk-denmark.json",
+        "--dataloader_num_workers",
+        "6"
+    ],
+    "state": "running",
+    "program": "04-train_model-test.py",
+    "codePath": "model_training/04-train_model-test.py",
+    "git": {
+        "remote": "https://github.com/RolnickLab/gbif_species_trainer.git",
+        "commit": "ead6015524e59ea8637dac28979468b5cfe1a2ea"
+    },
+    "email": "aditya.jain@mila.quebec",
+    "root": "/home/mila/a/aditya.jain/gbif_species_trainer",
+    "host": "cn-c027",
+    "username": "aditya.jain",
+    "executable": "/home/mila/a/aditya.jain/.conda/envs/milamoth/bin/python"
+}

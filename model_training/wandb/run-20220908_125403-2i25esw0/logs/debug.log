@@ -1,0 +1,163 @@
+2022-09-08 12:54:03,155 INFO    MainThread:1830 [wandb_setup.py:_flush():76] Loading settings from /home/mila/a/aditya.jain/.config/wandb/settings
+2022-09-08 12:54:03,157 INFO    MainThread:1830 [wandb_setup.py:_flush():76] Loading settings from /home/mila/a/aditya.jain/gbif_species_trainer/model_training/wandb/settings
+2022-09-08 12:54:03,158 INFO    MainThread:1830 [wandb_setup.py:_flush():76] Loading settings from environment variables: {}
+2022-09-08 12:54:03,158 INFO    MainThread:1830 [wandb_setup.py:_flush():76] Inferring run settings from compute environment: {'program_relpath': 'model_training/04-train_model.py', 'program': '04-train_model.py'}
+2022-09-08 12:54:03,159 INFO    MainThread:1830 [wandb_init.py:_log_setup():428] Logging user logs to /home/mila/a/aditya.jain/gbif_species_trainer/model_training/wandb/run-20220908_125403-2i25esw0/logs/debug.log
+2022-09-08 12:54:03,159 INFO    MainThread:1830 [wandb_init.py:_log_setup():429] Logging internal logs to /home/mila/a/aditya.jain/gbif_species_trainer/model_training/wandb/run-20220908_125403-2i25esw0/logs/debug-internal.log
+2022-09-08 12:54:03,159 INFO    MainThread:1830 [wandb_init.py:init():462] calling init triggers
+2022-09-08 12:54:03,160 INFO    MainThread:1830 [wandb_init.py:init():466] wandb.init called with sweep_config: {}
+config: {}
+2022-09-08 12:54:03,160 INFO    MainThread:1830 [wandb_init.py:init():515] starting backend
+2022-09-08 12:54:03,160 INFO    MainThread:1830 [backend.py:_multiprocessing_setup():99] multiprocessing start_methods=fork,spawn,forkserver, using: spawn
+2022-09-08 12:54:03,172 INFO    MainThread:1830 [backend.py:ensure_launched():217] starting backend process...
+2022-09-08 12:54:03,185 INFO    MainThread:1830 [backend.py:ensure_launched():222] started backend process with pid: 1995
+2022-09-08 12:54:03,188 INFO    MainThread:1830 [wandb_init.py:init():525] backend started and connected
+2022-09-08 12:54:03,252 INFO    MainThread:1830 [wandb_init.py:init():596] updated telemetry
+2022-09-08 12:54:03,329 INFO    MainThread:1830 [wandb_init.py:init():628] communicating run to backend with 30 second timeout
+2022-09-08 12:54:08,588 INFO    MainThread:1830 [wandb_run.py:_on_init():1924] communicating current version
+2022-09-08 12:54:08,658 INFO    MainThread:1830 [wandb_run.py:_on_init():1928] got version response upgrade_message: "wandb version 0.13.2 is available!  To upgrade, please run:\n $ pip install wandb --upgrade"
+
+2022-09-08 12:54:08,664 INFO    MainThread:1830 [wandb_init.py:init():662] starting run threads in backend
+2022-09-08 12:54:13,695 INFO    MainThread:1830 [wandb_run.py:_console_start():1898] atexit reg
+2022-09-08 12:54:13,699 INFO    MainThread:1830 [wandb_run.py:_redirect():1771] redirect: SettingsConsole.REDIRECT
+2022-09-08 12:54:13,700 INFO    MainThread:1830 [wandb_run.py:_redirect():1776] Redirecting console.
+2022-09-08 12:54:13,707 INFO    MainThread:1830 [wandb_run.py:_redirect():1832] Redirects installed.
+2022-09-08 12:54:13,707 INFO    MainThread:1830 [wandb_init.py:init():688] run started, returning control to user process
+2022-09-08 12:54:13,749 INFO    MainThread:1830 [wandb_setup.py:_flush():76] Loading settings from /home/mila/a/aditya.jain/.config/wandb/settings
+2022-09-08 12:54:13,751 INFO    MainThread:1830 [wandb_setup.py:_flush():76] Loading settings from /home/mila/a/aditya.jain/gbif_species_trainer/model_training/wandb/settings
+2022-09-08 12:54:13,752 INFO    MainThread:1830 [wandb_setup.py:_flush():76] Loading settings from environment variables: {}
+2022-09-08 12:54:13,752 INFO    MainThread:1830 [wandb_setup.py:_flush():76] Inferring run settings from compute environment: {'program_relpath': 'model_training/04-train_model.py', 'program': '04-train_model.py'}
+2022-09-08 12:54:13,753 INFO    MainThread:1830 [wandb_init.py:_log_setup():428] Logging user logs to /home/mila/a/aditya.jain/gbif_species_trainer/model_training/wandb/run-20220908_125413-lnx1456k/logs/debug.log
+2022-09-08 12:54:13,754 INFO    MainThread:1830 [wandb_init.py:_log_setup():429] Logging internal logs to /home/mila/a/aditya.jain/gbif_species_trainer/model_training/wandb/run-20220908_125413-lnx1456k/logs/debug-internal.log
+2022-09-08 12:54:13,754 INFO    MainThread:1830 [wandb_init.py:init():462] calling init triggers
+2022-09-08 12:54:13,755 INFO    MainThread:1830 [wandb_init.py:init():466] wandb.init called with sweep_config: {}
+config: {}
+2022-09-08 12:54:13,755 INFO    MainThread:1830 [wandb_init.py:init():510] wandb.init() called when a run is still active
+2022-09-09 18:01:57,803 INFO    MainThread:1830 [wandb_run.py:_finish():1685] finishing run moth-ai/UK-Denmark-Moth-Classifier/2i25esw0
+2022-09-09 18:01:57,804 INFO    MainThread:1830 [wandb_run.py:_atexit_cleanup():1867] got exitcode: 0
+2022-09-09 18:01:57,807 INFO    MainThread:1830 [wandb_run.py:_restore():1839] restore
+2022-09-09 18:02:00,197 INFO    MainThread:1830 [wandb_run.py:_on_finish():1996] got exit ret: file_counts {
+  wandb_count: 1
+  artifact_count: 1
+}
+pusher_stats {
+  uploaded_bytes: 142386164
+  total_bytes: 142386164
+}
+
+2022-09-09 18:02:00,401 INFO    MainThread:1830 [wandb_run.py:_on_finish():1996] got exit ret: file_counts {
+  wandb_count: 1
+  artifact_count: 1
+}
+pusher_stats {
+  uploaded_bytes: 142386164
+  total_bytes: 142386164
+}
+
+2022-09-09 18:02:00,544 INFO    MainThread:1830 [wandb_run.py:_on_finish():1996] got exit ret: file_counts {
+  wandb_count: 1
+  artifact_count: 1
+}
+pusher_stats {
+  uploaded_bytes: 142386164
+  total_bytes: 142386164
+}
+
+2022-09-09 18:02:00,666 INFO    MainThread:1830 [wandb_run.py:_on_finish():1996] got exit ret: file_counts {
+  wandb_count: 6
+  artifact_count: 1
+}
+pusher_stats {
+  uploaded_bytes: 142386164
+  total_bytes: 142531100
+}
+
+2022-09-09 18:02:00,770 INFO    MainThread:1830 [wandb_run.py:_on_finish():1996] got exit ret: file_counts {
+  wandb_count: 6
+  artifact_count: 1
+}
+pusher_stats {
+  uploaded_bytes: 142386164
+  total_bytes: 142531100
+}
+
+2022-09-09 18:02:00,874 INFO    MainThread:1830 [wandb_run.py:_on_finish():1996] got exit ret: file_counts {
+  wandb_count: 6
+  artifact_count: 1
+}
+pusher_stats {
+  uploaded_bytes: 142386164
+  total_bytes: 142531100
+}
+
+2022-09-09 18:02:00,977 INFO    MainThread:1830 [wandb_run.py:_on_finish():1996] got exit ret: file_counts {
+  wandb_count: 6
+  artifact_count: 1
+}
+pusher_stats {
+  uploaded_bytes: 142531100
+  total_bytes: 142531100
+}
+
+2022-09-09 18:02:01,080 INFO    MainThread:1830 [wandb_run.py:_on_finish():1996] got exit ret: file_counts {
+  wandb_count: 6
+  artifact_count: 1
+}
+pusher_stats {
+  uploaded_bytes: 142531100
+  total_bytes: 142531100
+}
+
+2022-09-09 18:02:01,184 INFO    MainThread:1830 [wandb_run.py:_on_finish():1996] got exit ret: file_counts {
+  wandb_count: 6
+  artifact_count: 1
+}
+pusher_stats {
+  uploaded_bytes: 142531100
+  total_bytes: 142531100
+}
+
+2022-09-09 18:02:01,288 INFO    MainThread:1830 [wandb_run.py:_on_finish():1996] got exit ret: file_counts {
+  wandb_count: 6
+  artifact_count: 1
+}
+pusher_stats {
+  uploaded_bytes: 142531100
+  total_bytes: 142531100
+}
+
+2022-09-09 18:02:01,392 INFO    MainThread:1830 [wandb_run.py:_on_finish():1996] got exit ret: file_counts {
+  wandb_count: 6
+  artifact_count: 1
+}
+pusher_stats {
+  uploaded_bytes: 142531100
+  total_bytes: 142531100
+}
+
+2022-09-09 18:02:02,642 INFO    MainThread:1830 [wandb_run.py:_on_finish():1996] got exit ret: file_counts {
+  wandb_count: 6
+  artifact_count: 1
+}
+pusher_stats {
+  uploaded_bytes: 142531100
+  total_bytes: 142531100
+}
+
+2022-09-09 18:02:02,872 INFO    MainThread:1830 [wandb_run.py:_on_finish():1996] got exit ret: done: true
+exit_result {
+}
+file_counts {
+  wandb_count: 6
+  artifact_count: 1
+}
+pusher_stats {
+  uploaded_bytes: 142531100
+  total_bytes: 142531100
+}
+local_info {
+}
+
+2022-09-09 18:02:04,349 INFO    MainThread:1830 [wandb_run.py:_footer_history_summary_info():3104] rendering history
+2022-09-09 18:02:04,356 INFO    MainThread:1830 [wandb_run.py:_footer_history_summary_info():3136] rendering summary
+2022-09-09 18:02:04,365 INFO    MainThread:1830 [wandb_run.py:_footer_sync_info():3060] logging synced files

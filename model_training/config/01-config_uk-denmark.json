@@ -1,5 +1,5 @@
 {
-	"note": "This config file is for training on the complete macromoths dataset",
+	"note": "This config file is for training on the complete moths dataset",
 	
 	"model":{
 		"species_num_classes":3175,
