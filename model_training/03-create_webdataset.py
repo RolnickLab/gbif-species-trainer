@@ -46,17 +46,16 @@ def create_webdataset(args):
 	dataset_df = dataset_df.sample(frac=1)
 	label_list = json.load(open(label_filepath))
 
-	transformer = transforms.Compose([
-					transforms.Resize((img_resize, img_resize))])
-
-	sink        = wds.ShardWriter(webdataset_patern, maxsize=max_shard_size)
-	corrupt_img = 0
+	sink          = wds.ShardWriter(webdataset_patern, maxsize=max_shard_size)
+	corrupt_img   = 0
+	not_found_img = 0 
 
 	for _, row in dataset_df.iterrows():
 		image_path = dataset_dir + row['family'] + '/' + row['genus'] + '/' + row['species'] + '/' + row['filename'] 
 
 		if not os.path.isfile(image_path):
 			print(f'File {image_path} not found')
+			not_found_img += 1
 			continue
         
 		# check issue with image opening; completely corrupted
@@ -72,6 +71,10 @@ def create_webdataset(args):
 			corrupt_img += 1
 			continue    
         
+		transformer = transforms.Compose([
+					transforms.CenterCrop((min(image.size), min(image.size))),
+					transforms.Resize((img_resize, img_resize))])
+		
 		# check for partial image corruption
 		try:
 			image = transformer(image) 
@@ -97,7 +100,7 @@ def create_webdataset(args):
     
 	sink.close()
 	print(f'Total corrupted images are: {corrupt_img}')
-
+	print(f'Total not found images are: {not_found_img}')
 
 if __name__ == '__main__':
 	parser = argparse.ArgumentParser()
