@@ -29,6 +29,21 @@ def set_random_seed(random_seed):
 	torch.backends.cudnn.deterministic = True
 
 
+def padding(image):
+    """returns the padding transformation required based on image shape"""
+    
+    height, width = np.shape(image)[0], np.shape(image)[1]
+    
+    if height<width:    
+        pad_transform = transforms.Pad(padding=[0, 0, 0, width-height])
+    elif height>width:
+        pad_transform = transforms.Pad(padding=[0, 0, height-width, 0])
+    else:
+        return None
+    
+    return pad_transform
+
+
 def create_webdataset(args):
 	"""creates dataset samples"""
 	
@@ -69,10 +84,13 @@ def create_webdataset(args):
 		except OSError:
 			print(f'OSError Error on file {image_path}')
 			corrupt_img += 1
-			continue    
+			continue   
+
+		padding_transform = padding(image)
+		if padding_transform:
+			image = padding_transform(image)
         
 		transformer = transforms.Compose([
-					transforms.CenterCrop((min(image.size), min(image.size))),
 					transforms.Resize((img_resize, img_resize))])
 		
 		# check for partial image corruption
