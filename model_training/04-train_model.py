@@ -27,9 +27,9 @@ from tqdm import tqdm
 import time
 from sklearn.metrics import confusion_matrix
 import argparse
-from data import dataloader
 import random
 
+from data import dataloader
 from models.build_model import build_model
 from data.mothdataset import MOTHDataset
 from training_params.loss import Loss
@@ -90,8 +90,14 @@ def train_model(args):
 	# Get cpu or gpu device for training.
 	device = "cuda" if torch.cuda.is_available() else "cpu"
 	print(device)
-	model = build_model(config_data).to(device)
-
+	model = build_model(config_data)
+	
+	# Making use of multiple GPUs
+	if torch.cuda.device_count() > 1:
+		print("Let's use", torch.cuda.device_count(), "GPUs!")
+		model = nn.DataParallel(model)
+	model = model.to(device)
+	
 	# Loading Data
 	# Training data loader
 	train_dataloader = dataloader.build_webdataset_pipeline(
@@ -144,7 +150,7 @@ def train_model(args):
 		# model training on training dataset
 		model.train()                      
 		for image_batch, label_batch in train_dataloader:    
-			image_batch, label_batch = image_batch.to(device), label_batch.to(device)          
+			image_batch, label_batch = image_batch.to(device, non_blocking=True), label_batch.to(device, non_blocking=True)          
         
 			optimizer.zero_grad()
 
@@ -165,7 +171,7 @@ def train_model(args):
 		# model evaluation on validation dataset
 		model.eval()                       
 		for image_batch, label_batch in val_dataloader:
-			image_batch, label_batch = image_batch.to(device), label_batch.to(device)        
+			image_batch, label_batch = image_batch.to(device, non_blocking=True), label_batch.to(device, non_blocking=True)        
         
 			outputs   = model(image_batch)        
 			v_loss    = loss_func(outputs, label_batch)
@@ -179,13 +185,23 @@ def train_model(args):
 
     
 		if val_loss<lowest_val_loss:
-			torch.save({
-				'epoch': epoch,
-				'model_state_dict': model.state_dict(),
-				'optimizer_state_dict': optimizer.state_dict(),
-				'train_loss': train_loss,
-				'val_loss':val_loss}, 
-				save_path)        
+			if torch.cuda.device_count() > 1:
+				torch.save({
+					'epoch': epoch,
+					'model_state_dict': model.module.state_dict(),
+					'optimizer_state_dict': optimizer.module.state_dict(),
+					'train_loss': train_loss,
+					'val_loss':val_loss}, 
+					save_path)   
+			else:
+				torch.save({
+					'epoch': epoch,
+					'model_state_dict': model.state_dict(),
+					'optimizer_state_dict': optimizer.state_dict(),
+					'train_loss': train_loss,
+					'val_loss':val_loss}, 
+					save_path)    
+				
 			lowest_val_loss = val_loss
 			early_stp_count = 0
 		else:

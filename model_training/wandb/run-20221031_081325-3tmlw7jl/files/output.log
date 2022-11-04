@@ -1,0 +1,45 @@
+
+cpu
+  0%|                                       | 0/30 [03:07<?, ?it/s]
+Traceback (most recent call last):
+  File "/home/mila/a/aditya.jain/gbif_species_trainer/model_training/04-train_model.py", line 311, in <module>
+    train_model(args)
+  File "/home/mila/a/aditya.jain/gbif_species_trainer/model_training/04-train_model.py", line 152, in train_model
+    for image_batch, label_batch in train_dataloader:
+  File "/home/mila/a/aditya.jain/.conda/envs/milamoth_ai/lib/python3.9/site-packages/torch/utils/data/dataloader.py", line 681, in __next__
+    data = self._next_data()
+  File "/home/mila/a/aditya.jain/.conda/envs/milamoth_ai/lib/python3.9/site-packages/torch/utils/data/dataloader.py", line 1356, in _next_data
+    return self._process_data(data)
+  File "/home/mila/a/aditya.jain/.conda/envs/milamoth_ai/lib/python3.9/site-packages/torch/utils/data/dataloader.py", line 1402, in _process_data
+    data.reraise()
+  File "/home/mila/a/aditya.jain/.conda/envs/milamoth_ai/lib/python3.9/site-packages/torch/_utils.py", line 461, in reraise
+    raise exception
+FileNotFoundError: Caught FileNotFoundError in DataLoader worker process 9.
+Original Traceback (most recent call last):
+  File "/home/mila/a/aditya.jain/.conda/envs/milamoth_ai/lib/python3.9/site-packages/torch/utils/data/_utils/worker.py", line 302, in _worker_loop
+    data = fetcher.fetch(index)
+  File "/home/mila/a/aditya.jain/.conda/envs/milamoth_ai/lib/python3.9/site-packages/torch/utils/data/_utils/fetch.py", line 32, in fetch
+    data.append(next(self.dataset_iter))
+  File "/home/mila/a/aditya.jain/.conda/envs/milamoth_ai/lib/python3.9/site-packages/webdataset/pipeline.py", line 68, in iterator
+    for sample in self.iterator1():
+  File "/home/mila/a/aditya.jain/.conda/envs/milamoth_ai/lib/python3.9/site-packages/webdataset/filters.py", line 415, in _map_tuple
+    for sample in data:
+  File "/home/mila/a/aditya.jain/.conda/envs/milamoth_ai/lib/python3.9/site-packages/webdataset/filters.py", line 392, in _to_tuple
+    for sample in data:
+  File "/home/mila/a/aditya.jain/.conda/envs/milamoth_ai/lib/python3.9/site-packages/webdataset/filters.py", line 297, in _map
+    for sample in data:
+  File "/home/mila/a/aditya.jain/.conda/envs/milamoth_ai/lib/python3.9/site-packages/webdataset/filters.py", line 208, in _shuffle
+    for sample in data:
+  File "/home/mila/a/aditya.jain/.conda/envs/milamoth_ai/lib/python3.9/site-packages/webdataset/tariterators.py", line 150, in group_by_keys
+    for filesample in data:
+  File "/home/mila/a/aditya.jain/.conda/envs/milamoth_ai/lib/python3.9/site-packages/webdataset/tariterators.py", line 124, in tar_file_expander
+    for source in data:
+  File "/home/mila/a/aditya.jain/.conda/envs/milamoth_ai/lib/python3.9/site-packages/webdataset/tariterators.py", line 75, in url_opener
+    if handler(exn):
+  File "/home/mila/a/aditya.jain/.conda/envs/milamoth_ai/lib/python3.9/site-packages/webdataset/filters.py", line 80, in reraise_exception
+    raise exn
+  File "/home/mila/a/aditya.jain/.conda/envs/milamoth_ai/lib/python3.9/site-packages/webdataset/tariterators.py", line 70, in url_opener
+    stream = gopen.gopen(url, **kw)
+  File "/home/mila/a/aditya.jain/.conda/envs/milamoth_ai/lib/python3.9/site-packages/webdataset/gopen.py", line 376, in gopen
+    return open(url, mode, buffering=bufsize)
+FileNotFoundError: [Errno 2] No such file or directory: '/Tmp/slurm.2415245.0/train-500-000473.tar'

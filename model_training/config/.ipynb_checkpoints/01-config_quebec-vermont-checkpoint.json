@@ -15,7 +15,7 @@
 	},
 	
 	"training":{
-		"batch_size": 64,
+		"batch_size": 128,
 		"image_resize": 300,
 		"epochs": 30,
 		"early_stopping": 5,
@@ -34,6 +34,6 @@
 				},
 		"model_save_path": "/home/mila/a/aditya.jain/logs/",
 		"model_name": "quebec-vermont-moth-model",
-		"version": "v02"
+		"version": "v03"
 	}
 }

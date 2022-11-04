@@ -5,8 +5,14 @@ This repository contains the code to download image and metadata for any species
 ## Setup python environment
 Install [conda](https://docs.conda.io/projects/conda/en/latest/user-guide/install/index.html) and prepare a python environment using the provided environment file:
 
+Build a new conda environment
 ```bash
-conda env create -f gbif_species_trainer.yml
+conda create -n gbif_species_trainer python=3.9
+```
+
+Install cuda toolkit and pytorch
+```bash
+conda install pytorch torchvision torchaudio pytorch-cuda=11.7 -c pytorch -c nvidia
 ```
 
 Install additional libraries using pip:
