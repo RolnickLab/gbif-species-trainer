@@ -1,7 +1,11 @@
 pygbif
 scikit-learn
 webdataset
-pandas
 wandb
 torchsummary
+tensorflow
+matplotlib
 keras
+numpy
+tqdm
+pandas
