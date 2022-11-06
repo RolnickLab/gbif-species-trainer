@@ -1,0 +1,18 @@
+2022-11-05 14:03:39,474 INFO    MainThread:45836 [wandb_setup.py:_flush():68] Configure stats pid to 45836
+2022-11-05 14:03:39,475 INFO    MainThread:45836 [wandb_setup.py:_flush():68] Loading settings from /home/mila/a/aditya.jain/.config/wandb/settings
+2022-11-05 14:03:39,475 INFO    MainThread:45836 [wandb_setup.py:_flush():68] Loading settings from /home/mila/a/aditya.jain/gbif_species_trainer/model_training/wandb/settings
+2022-11-05 14:03:39,476 INFO    MainThread:45836 [wandb_setup.py:_flush():68] Loading settings from environment variables: {'_require_service': 'True'}
+2022-11-05 14:03:39,477 INFO    MainThread:45836 [wandb_setup.py:_flush():68] Inferring run settings from compute environment: {'program_relpath': 'model_training/04-train_model.py', 'program': '/home/mila/a/aditya.jain/gbif_species_trainer/model_training/04-train_model.py'}
+2022-11-05 14:03:39,478 INFO    MainThread:45836 [wandb_init.py:_log_setup():476] Logging user logs to /home/mila/a/aditya.jain/gbif_species_trainer/model_training/wandb/run-20221105_140339-11jpgwsn/logs/debug.log
+2022-11-05 14:03:39,478 INFO    MainThread:45836 [wandb_init.py:_log_setup():477] Logging internal logs to /home/mila/a/aditya.jain/gbif_species_trainer/model_training/wandb/run-20221105_140339-11jpgwsn/logs/debug-internal.log
+2022-11-05 14:03:39,479 INFO    MainThread:45836 [wandb_init.py:init():516] calling init triggers
+2022-11-05 14:03:39,480 INFO    MainThread:45836 [wandb_init.py:init():519] wandb.init called with sweep_config: {}
+config: {}
+2022-11-05 14:03:39,481 INFO    MainThread:45836 [wandb_init.py:init():564] wandb.init() called when a run is still active
+2022-11-06 03:19:36,521 INFO    MainThread:45836 [wandb_run.py:_finish():1746] finishing run moth-ai/Quebec-Vermont-Moth-Classifier/xi5bg7we
+2022-11-06 03:19:36,522 INFO    MainThread:45836 [wandb_run.py:_atexit_cleanup():1949] got exitcode: 0
+2022-11-06 03:19:36,523 INFO    MainThread:45836 [wandb_run.py:_restore():1932] restore
+2022-11-06 03:19:36,524 INFO    MainThread:45836 [wandb_run.py:_restore():1938] restore done
+2022-11-06 03:19:43,068 INFO    MainThread:45836 [wandb_run.py:_footer_history_summary_info():3377] rendering history
+2022-11-06 03:19:43,074 INFO    MainThread:45836 [wandb_run.py:_footer_history_summary_info():3409] rendering summary
+2022-11-06 03:19:43,083 INFO    MainThread:45836 [wandb_run.py:_footer_sync_info():3333] logging synced files

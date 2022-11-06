@@ -11,7 +11,6 @@ import wandb
 import torchvision.models as torchmodels
 import torch
 from torch import nn
-from torchsummary import summary
 import json
 import os
 import matplotlib.pyplot as plt
@@ -189,7 +188,7 @@ def train_model(args):
 				torch.save({
 					'epoch': epoch,
 					'model_state_dict': model.module.state_dict(),
-					'optimizer_state_dict': optimizer.module.state_dict(),
+					'optimizer_state_dict': optimizer.state_dict(),
 					'train_loss': train_loss,
 					'val_loss':val_loss}, 
 					save_path)   
