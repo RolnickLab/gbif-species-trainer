@@ -1,7 +1,0 @@
-2022-06-16 07:53:22,721 INFO    MainThread:25929 [internal.py:wandb_internal():93] W&B internal server running at pid: 25929, started at: 2022-06-16 07:53:22.711952
-2022-06-16 07:53:22,734 INFO    WriterThread:25929 [datastore.py:open_for_write():75] open: /home/mila/a/aditya.jain/mothAI/classification_moths/wandb/run-20220616_075249-pb4ttp9s/run-pb4ttp9s.wandb
-2022-06-16 07:53:22,735 DEBUG   HandlerThread:25929 [handler.py:handle_request():141] handle_request: shutdown
-2022-06-16 07:53:22,739 INFO    HandlerThread:25929 [handler.py:finish():806] shutting down handler
-2022-06-16 07:53:22,741 INFO    WriterThread:25929 [datastore.py:close():279] close: /home/mila/a/aditya.jain/mothAI/classification_moths/wandb/run-20220616_075249-pb4ttp9s/run-pb4ttp9s.wandb
-2022-06-16 07:53:22,762 INFO    SenderThread:25929 [sender.py:finish():1110] shutting down sender
-2022-06-16 07:53:23,730 INFO    MainThread:25929 [internal.py:handle_exit():80] Internal process exited

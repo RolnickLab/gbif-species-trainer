@@ -1,6 +1,6 @@
 # Species model trainer from GBIF 
 
-This repository contains the code to download image and metadata for any species of interest from [GBIF](https://www.gbif.org/) (Global Biodiversity Information Facility) and train a deep learning model using the downloaded data.
+This repository contains the code to download image and metadata for a list of species from [Global Biodiversity Information Facility](https://www.gbif.org/) (GBIF) and train a deep learning model using the downloaded data.
 
 ## Setup python environment
 Install [conda](https://docs.conda.io/projects/conda/en/latest/user-guide/install/index.html) and prepare a python environment using the following steps:
@@ -8,6 +8,11 @@ Install [conda](https://docs.conda.io/projects/conda/en/latest/user-guide/instal
 Build a new conda environment
 ```bash
 conda create -n gbif_species_trainer python=3.9
+```
+
+Activate the conda environment:
+```bash
+conda activate gbif_species_trainer
 ```
 
 Install cuda toolkit and pytorch
@@ -21,13 +26,8 @@ Install additional libraries using pip:
 python3 -m pip install -r requirements.txt
 ```
 
-Activate the conda environment:
-```bash
-conda activate gbif_species_trainer
-```
-
 ## Download Data
-The first step is to download data for species of interest. The instructions can be found in the `data_download` folder.
+Follow instructions in the `data_download` folder to download data for a list of species.
 
 ## Train Model
-[TO BE UPDATED]
+Train a model using scripts in `model_training` folder.

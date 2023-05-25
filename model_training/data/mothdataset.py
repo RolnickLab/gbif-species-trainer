@@ -10,7 +10,7 @@ import pandas as pd
 import json
 import torch
 
-class MOTHDataset(Dataset):
+class MothDataset(Dataset):
 	def __init__(self, root_dir, data_list, label_list, transform=None):      
 		"""
 		Args:
