@@ -1,3 +1,5 @@
+## *** NOTE: This code is deprecated and being slowly merged to [ami-ml](https://github.com/RolnickLab/ami-ml) repoistory. ***
+
 # Species model trainer from GBIF 
 
 This repository contains the code to download image and metadata for a list of species from [Global Biodiversity Information Facility](https://www.gbif.org/) (GBIF) and train a deep learning model using the downloaded data.
